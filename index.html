@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/e6e4069c41.js" crossorigin="anonymous"></script>
 
     <script src="./src/pages.js" defer></script>
+    <script type="module" src="./src/coin.js" defer></script>
     <meta charset="utf-8">
     <title>My first three.js app</title>
     <style>
@@ -123,7 +124,7 @@
           <div class="pages-random">
             <div class="header toys">
               <div class="ultra-font">
-                Randoms
+                Random Stuff
               </div>
               <div>
                 <button class="controls prev-btn">
@@ -134,14 +135,17 @@
                 </button>
               </div>
             </div>
-            <span class="contents-page slabo-font">
-              <div class="page active">
-                Hello page 1
+            <div class="contents-page slabo-font">
+              <div class="page active random-canvas">
+                <button id="canvas-coin-flip" class="button">
+                  <span class="button-content slabo-font">Flip!</span>
+                </button>
+                <canvas id="coin-flip"></canvas>
               </div>
               <div class="page">
                 Hello page 2
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>

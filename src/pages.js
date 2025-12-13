@@ -1,6 +1,5 @@
 class Pages {
     constructor(container) {
-        console.log(container)
         this.container = container;
         this.slides = container.querySelectorAll('.page');
         this.currentSlide = 0;
