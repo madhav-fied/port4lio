@@ -97,7 +97,7 @@ controls.target.set(0, 3, -1);
 
 let isFlipping = false;
 let flipStartTime = Date.now();
-let flipDuration = 2000;
+let flipDuration = 1500;
 let numRotations = 0;
 let startRotationZ = 0;
 let finalRotationZ = 0;
@@ -113,7 +113,7 @@ flipButton.addEventListener('click', () => {
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
   }
-  numRotations = getRandomInt(10, 16);
+  numRotations = getRandomInt(6, 12);
   startRotationZ = coin.rotation.z;
   finalRotationZ = startRotationZ + (Math.PI * numRotations)
   flipStartTime = Date.now();

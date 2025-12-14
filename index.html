@@ -11,6 +11,7 @@
 
     <script src="./src/pages.js" defer></script>
     <script type="module" src="./src/coin.js" defer></script>
+    <script type="module" src="./src/widgets.js" defer></script>
     <meta charset="utf-8">
     <title>My first three.js app</title>
     <style>
@@ -43,7 +44,41 @@
       
       <div id="widgets" class="bento-compartment">
         <div id="inner-container">
+          <div id="widgets-frame">
+            <div id="title-widget" class="ultra-font title-widget">
+              Widgets
+            </div>
+            <div id="time-widget">
 
+            </div>
+            <div id="location-widget">
+
+              <div class="slabo-font location-city">
+                <span class="fa-solid fa-location-crosshairs fa-xs" style="color: #ffffff;"></span>
+                <div class="location-text">
+                  <div>Hyderabad,</div>
+                  <div style="font-size: 1rem;">India</div>
+                </div>
+              </div>
+
+              <div class="slabo-font location-coord">
+                <div>17.4065° N</div>
+                <div>78.4772° E</div>
+              </div>
+
+              <div class="sphere"></div>
+
+            </div>
+            <div id="thought-widget" class="slabo-font though-of-the-time">
+
+            </div>
+            <div id="weather-widget">
+
+            </div>
+            <div id="tbd-widget">
+
+            </div>
+          </div>
         </div>
       </div>
 

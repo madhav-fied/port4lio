@@ -206,3 +206,110 @@
     width: 21rem;
     border-radius: 1rem;
 }
+
+/* Widgets */
+
+#widgets-frame {
+    border: 1px solid green;
+    display: grid;
+
+    height: 100%;
+    box-sizing: border-box;
+    
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#time-widget {
+    border: 1px solid blue;
+    display: flex;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+#thought-widget {
+    display: flex;
+    grid-column: 1 / span 4;
+    grid-row: 4 / span 1;
+
+    border-radius: 2rem;
+    background: rgb(0, 0, 0, 0.2);
+
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#location-widget {
+    display: flex;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 3;
+    
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    justify-content: space-evenly;
+
+    border-radius: 2rem;
+    background: rgb(0, 0, 0, 0.2);
+}
+
+.location-city {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.location-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.location-coord {
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sphere {
+    width: 4rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: 
+        radial-gradient(circle at 35% 25%, rgba(255,255,255,0.3) 0%, transparent 15%),
+        radial-gradient(circle at 40% 30%, #0000 4%, 57%, #000 90%),
+        linear-gradient(125deg, #2E7D32 0%, #1976D2 40%, #2E7D32 70%, #1976D2 100%)
+}
+
+
+#weather-widget {
+    border: 1px solid white;
+    display: flex;
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+}
+
+#title-widget {
+    display: flex;
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#tbd-widget {
+    border: 1px solid greenyellow;
+    display: flex;
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 2;
+}
