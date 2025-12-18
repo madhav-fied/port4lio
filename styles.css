@@ -223,11 +223,51 @@
 }
 
 #time-widget {
-    border: 1px solid blue;
     display: flex;
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
+
+    border-radius: 2rem;
+    background: rgb(0, 0, 0, 0.2);
+
+    padding: 1rem;
+    flex-direction: column;
 }
+
+#current-time {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2.5rem;
+    padding: 0.5rem;
+}
+
+#clock {
+    display: flex;
+}
+
+#time-diff {
+    font-size: 1.5rem;
+}
+
+#date-current {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-decoration: overline;
+}
+
 
 #thought-widget {
     display: flex;
@@ -293,9 +333,36 @@
 #weather-widget {
     border: 1px solid white;
     display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0.5rem;
     grid-column: 1 / span 2;
     grid-row: 3 / span 1;
+
+    border-radius: 2rem;
+    background: rgb(0, 0, 0, 0.2);
 }
+
+#temperature {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid brown;
+    width: 40%;
+}
+
+#sun-track {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid yellowgreen;
+    width: 35%;
+}
+
+#uv-index {
+    border: 1px solid hotpink;
+    width: 15%;
+}
+
+
 
 #title-widget {
     display: flex;
@@ -312,4 +379,7 @@
     display: flex;
     grid-column: 4 / span 1;
     grid-row: 2 / span 2;
+
+    border-radius: 2rem;
+    background: rgb(0, 0, 0, 0.2);
 }

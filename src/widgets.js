@@ -64,11 +64,70 @@ const THOUGHTS = [
 ]
 
 const thoughElement = document.querySelector('#thought-widget');
-console.log(thoughElement)
 thoughElement.textContent = THOUGHTS[Math.floor(Math.random() * THOUGHTS.length)];
 
 // Thought widget end
 
 // Time widget start
 
+const computeTime = () => {
+    var currentDate = new Date(),
+        hours = String(currentDate.getHours()).padStart(2, '0'),
+        minutes = String(currentDate.getMinutes()).padStart(2, '0'),
+        seconds = String(currentDate.getSeconds()).padStart(2, '0'),
+        dateString = currentDate.toDateString();
+    
+    const hourEle = document.querySelector('#hours');
+    const minutesEle = document.querySelector('#minutes');
+    const secondsEle = document.querySelector('#seconds');
+    const dateEle = document.querySelector('#date-current');
+
+    hourEle.textContent = hours;
+    minutesEle.textContent = minutes;
+    secondsEle.textContent = seconds;
+    dateEle.textContent = dateString;
+}
+
+setInterval(() => computeTime(), 1000);
+
 // Time widget end
+
+// Weather widget start
+
+import { fetchWeatherApi } from "openmeteo";
+
+const params = {
+	longitude: 78.4772,
+	latitude: 17.4065,
+	daily: ["sunrise", "sunset", "uv_index_max", "temperature_2m_max", "temperature_2m_min"],
+	current: "temperature_2m",
+	timezone: "auto",
+	forecast_days: 1,
+};
+const url = "https://api.open-meteo.com/v1/forecast";
+const responses = await fetchWeatherApi(url, params);
+const response = responses[0];
+const utcOffsetSeconds = response.utcOffsetSeconds();
+
+const current = response.current();
+const daily = response.daily();
+const sunrise = daily.variables(0);
+const sunset = daily.variables(1);
+
+const currentTemperature = current.variables(0).value();
+const uvIndexMax = daily.variables(2).valuesArray()[0];
+const [maxTemperature, minTemperature] = [
+    daily.variables(3).valuesArray()[0],
+    daily.variables(4).valuesArray()[0]
+  ];
+const sunriseTime = new Date(
+  (Number(sunrise.valuesInt64(0)) + utcOffsetSeconds) * 1000
+);
+const sunsetTime = new Date(
+  (Number(sunset.valuesInt64(0)) + utcOffsetSeconds) * 1000
+);
+
+
+
+
+// Weather widget end
