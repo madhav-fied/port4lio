@@ -121,13 +121,97 @@ const [maxTemperature, minTemperature] = [
     daily.variables(4).valuesArray()[0]
   ];
 const sunriseTime = new Date(
-  (Number(sunrise.valuesInt64(0)) + utcOffsetSeconds) * 1000
+  (Number(sunrise.valuesInt64(0))) * 1000
 );
 const sunsetTime = new Date(
-  (Number(sunset.valuesInt64(0)) + utcOffsetSeconds) * 1000
+  (Number(sunset.valuesInt64(0))) * 1000
 );
 
+const currentTemperatureEle = document.querySelector("#current-temp-value");
+const uvIndexMaxEle = document.querySelector("#uv-value");
+const maxTemperatureEle = document.querySelector("#max-temp");
+const minTemperatureEle = document.querySelector("#min-temp");
+const sunriseTimeEle = document.querySelector("#sunrise-time");
+const sunsetTimeEle = document.querySelector("#sunset-time");
 
+currentTemperatureEle.textContent = `${Math.round(currentTemperature)}°`;
+maxTemperatureEle.textContent = `${Math.round(maxTemperature)}°`;
+minTemperatureEle.textContent = `${Math.round(minTemperature)}°`;
+sunriseTimeEle.textContent = `${String(sunriseTime.getHours()).padStart(2, '0')}:${String(sunriseTime.getMinutes()).padStart(2, '0')}`;
+sunsetTimeEle.textContent = `${String(sunsetTime.getHours()).padStart(2, '0')}:${String(sunsetTime.getMinutes()).padStart(2, '0')}`;
+uvIndexMaxEle.textContent = Math.round(uvIndexMax);
 
+console.log(sunriseTime)
+console.log(sunsetTime)
 
 // Weather widget end
+
+// Meta widget start
+
+let clickCounter = 0;
+let deviceType = '';
+let browserInfo = '';
+let pageReloads = 0;
+let tabSwitches = 0;
+
+document.addEventListener('click', () => {
+  clickCounter++;
+});
+
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    tabSwitches++;
+  }
+});
+
+function getDeviceType() {
+  const ua = navigator.userAgent;
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+    return 'tablet';
+  }
+  if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+    return 'mobile';
+  }
+  return 'desktop';
+}
+
+function getBrowserInfo() {
+  const ua = navigator.userAgent;
+  let browser = 'unknown';
+  
+  if (ua.indexOf('Firefox') > -1) {
+    browser = 'firefox';
+  } else if (ua.indexOf('Chrome') > -1) {
+    browser = 'chrome';
+  } else if (ua.indexOf('Safari') > -1) {
+    browser = 'safari';
+  } else if (ua.indexOf('Edge') > -1) {
+    browser = 'edge';
+  } else if (ua.indexOf('MSIE') > -1 || ua.indexOf('Trident') > -1) {
+    browser = 'IE';
+  } 
+  return browser;
+}
+
+deviceType = getDeviceType();
+browserInfo = getBrowserInfo();
+pageReloads = parseInt(sessionStorage.getItem('pageReloads') || '-1') + 1;
+sessionStorage.setItem('pageReloads', pageReloads);
+
+const deviceTypeEle = document.querySelector('#device-id');
+const browserTypeEle = document.querySelector('#browser-id');
+const clickCounterEle = document.querySelector('#click-counter');
+const pageReloadsEle = document.querySelector('#page-reloads');
+const tabSwitchesEle = document.querySelector('#tab-leaves');
+
+console.log(deviceType, browserInfo, pageReloads, clickCounter, tabSwitches);
+
+setInterval(() => {
+  deviceTypeEle.textContent = deviceType;
+  browserTypeEle.textContent = browserInfo;
+  clickCounterEle.textContent = clickCounter;
+  pageReloadsEle.textContent = pageReloads;
+  tabSwitchesEle.textContent = tabSwitches;
+}, 1000);
+
+// Meta widget end

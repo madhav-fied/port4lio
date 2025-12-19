@@ -102,35 +102,72 @@
 
               <div id="temperature">
                 <div id="current-temp">
-                  22
+                  <span class="fa-solid fa-temperature-empty fa-sm"></span>
+                  <span id="current-temp-value">22°</span>
                 </div>
                 <div id="min-max-temp">
-                  <div id="min-temp">
-                    12
+                  <div>
+                    <span class="fa-solid fa-arrow-trend-up"></span>
+                    <span id="max-temp">35°</span>
                   </div>
-                  <div id="max-temp">
-                    35
+
+                  <div>
+                    <span class="fa-solid fa-arrow-trend-down"></span>
+                    <span id="min-temp">12°</span>
                   </div>
                 </div>
               </div>
 
               <div id="sun-track">
-                <div id="sunrise-time">
-                  06:12
+                <div id="sun-icons">
+                  <span>rise</span>
+                  <span class="fa-solid fa-sun fa-sm"></span>
+                  <span>set</span>
                 </div>
-                <div id="sunset-time">
-                  17:56
+
+                <div id="sun-track-data">
+                  <div id="sunrise-time">
+                    06:12
+                  </div>
+                  <div id="sunset-time">
+                    17:56
+                  </div>
                 </div>
               </div>
-
+                
               <div id="uv-index">
-                47
+                <span>UV</span>
+                <span id="uv-value">47</span>
               </div>
 
             </div>
 
 
-            <div id="tbd-widget">
+            <div id="meta-widget" class="slabo-font">
+              <div class="session-meta">
+                <span>Browser: </span>
+                <span id="browser-id">-</span>
+              </div>
+
+              <div class="session-meta">
+                <span>Device: </span>
+                <span id="device-id">-</span>
+              </div>
+
+              <div class="session-meta">
+                <span>#Clicks: </span>
+                <span id="click-counter">0</span>
+              </div>
+
+              <div class="session-meta">
+                <span>#Refreshes: </span>
+                <span id="page-reloads">0</span>
+              </div>
+
+              <div class="session-meta">
+                <span>#Tab left: </span>
+                <span id="tab-leaves">0</span>
+              </div>
 
             </div>
           </div>
