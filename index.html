@@ -11,6 +11,7 @@
 
     <script src="./src/pages.js" defer></script>
     <script type="module" src="./src/coin.js" defer></script>
+    <script type="module" src="./src/md.js" defer></script>
     <script type="module" src="./src/widgets.js" defer></script>
     <meta charset="utf-8">
     <title>My first three.js app</title>
@@ -236,6 +237,35 @@
 
       <div id="projects" class="bento-compartment">
         <div id="inner-container">
+          <div class="work-pages">
+
+            <div class="header" id="work-header">
+              <div class="ultra-font">
+                My works
+              </div>
+              <div>
+                <button class="controls prev-btn">
+                  <span class="fa-solid fa-arrow-right fa-flip-horizontal" style="color: #f6f5f4;"></span>
+                </button>
+                <button class="controls next-btn">
+                  <span class="fa-solid fa-arrow-right" style="color: #f6f5f4;"></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="works-page slabo-font">
+              <div class="page active" id="office-work">
+                Hi
+              </div>
+              <div class="page" id="project-work">
+                More stuff coming soon!!!
+              </div>
+              <div class="page" id="selfhost-work">
+                Yayy
+              </div>
+            </div>
+
+          </div>
           
         </div>
       </div>
@@ -247,16 +277,16 @@
               Academic Background
             </div>
 
-            <div id="course-college-year-cgpa" class="ultra-font">
-              <div id="course-college">
+            <div id="course-college-year-cgpa">
+              <div id="course-college" class="slabo-font">
                 <div id="degree">B.E. Computer Science and Engineering</div>
-                <div id="college" class="slabo-font">Coimbatore Institue of Technology</div>
+                <div id="college">Coimbatore Institue of Technology</div>
               </div>
-              <div id="cgpa" class="ultra-font">
+              <div id="cgpa" class="slabo-font">
                 <span>CGPA</span>
                 <span>9.4</span>
               </div>
-              <div id="graduate-year" class="ultra-font">
+              <div id="graduate-year" class="slabo-font">
                 <span>Year</span>
                 <span>2023</span>
               </div>
@@ -287,6 +317,7 @@
       <div id="switch" class="bento-compartment">
         <div id="inner-container">
           <div class="pages-random">
+
             <div class="header toys">
               <div class="ultra-font">
                 Random Stuff
@@ -300,6 +331,7 @@
                 </button>
               </div>
             </div>
+
             <div class="contents-page slabo-font">
               <div class="page active random-canvas">
                 <button id="canvas-coin-flip" class="button">
@@ -311,6 +343,7 @@
                 More stuff coming soon!!!
               </div>
             </div>
+
           </div>
         </div>
       </div>

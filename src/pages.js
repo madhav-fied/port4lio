@@ -29,5 +29,6 @@ class Pages {
 }
 
 
-const randomPages = new Pages(document.querySelector('.pages-random'))
+const randomPages = new Pages(document.querySelector('.pages-random'));
+const workPages = new Pages(document.querySelector('.work-pages'));
 
