@@ -434,3 +434,64 @@
     width: 100%;
     padding-right: 0.2rem;
 }
+
+#edu-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1.5rem;
+}
+
+#header-edu {
+    font-size: 1.8rem;
+}
+
+#course-college-year-cgpa {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+#course-college {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+}
+
+#cgpa {
+    border-radius: 1rem;
+    padding: 0.8rem;
+    background: rgb(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#graduate-year {
+    border-radius: 1rem;
+    padding: 0.8rem;
+    background: rgb(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+#courses {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#course {
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background: rgb(0, 0, 0, 0.2);
+    width: max-content;
+}
+
+#achievements {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
