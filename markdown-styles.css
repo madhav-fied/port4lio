@@ -1,0 +1,31 @@
+/* .md h1 {
+    font-size: 1rem;
+}
+
+.md h2 {
+    font-size: 1rem;
+}
+
+.md h3 {
+    font-size: 1rem;
+}
+
+.md h4 {
+    font-size: 1rem;
+}
+
+.md h5 {
+    font-size: 1rem;
+}
+
+.md h6 {
+    font-size: 1rem;
+}
+
+.md p {
+    font-size: 1rem;
+} */
+
+.md blockquote{
+    border-left: 1px solid red;
+}
