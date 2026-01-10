@@ -1,40 +1,38 @@
-# 🧪 Self-Hosted Homelab
+## Apollo - My (mini) homelab
 
-A small but growing homelab where I run real services, expose them safely to the internet, and keep adding new pieces as ideas come up.
+On a sudden embark for self ownership and minimalism, I had decieded to ditch all and the content streaming apps 
+I own and attempt to self host all the services I need myself!
 
----
+Thus Apollo was born...
 
-## 🧱 Infrastructure
+#### Specifications
 
-* **Proxmox VE** as the base hypervisor
-* Services run as isolated **LXC containers**
-* Easy to snapshot, replace, and extend
+Its a small headless machine with parts from my old computers glued together.
+Apparently I had to get a AMD-V supporting processor to get virtualization suppport and
+had to ditch my old i3 processor :(
 
----
+It does not run a graphic card as AMD 5600X has enough power to boot up,
+Nothing powerful for storage as of now and exists with a 2TB Barracuda HDD.
 
-## 🌐 Networking & Ingress
+#### Infrastructure
 
-* A dedicated **Nginx LXC** acts as the entry point
-* SSL termination and reverse proxying live here
-* Internet access is via a **Cloudflare Tunnel**
+- Runs Proxmox VE as the base hypervisor to manage any services that are hosted
+- Most of the external user facing services run as Linux containers in isolation
+- Internal facing services (as of now 0 exists) will be run on VM based on requirements
 
-  * No public IPs
-  * No router port forwarding
+#### Networking
 
-```
-Todo: service diagram
-Internet → Cloudflare Tunnel → Nginx → Services
-```
+- A dedicated Nginx LXC acts as an ingress to any request! (Including the one you sent to reach this site)
+- Nginx is where SSL terminates and reverse proxying happens to all internally hosted services
+- Connection from Nginx to Cloudflare (my DNS person) happens via a Cloudflare tunnel as I could not 
+offer a static IP and take in headaches for firewalls and other configurations.
 
----
+![.Homelab diagram](./src/works/resources/Apollo.svg)
 
-## 🎰 Live Service: Blackjack Simulator
+#### Live services I have
 
-* Runs in its own LXC
-* Headless backend with a single exposed port
-* Public access routed through Nginx + Cloudflare
-* Static LAN port for local access and testing
+- A blackjack multiplayer game
+- My portfolio site which you are in now
 
----
+> << More to come... >>
 
-## More things incoming!!

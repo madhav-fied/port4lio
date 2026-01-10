@@ -111,3 +111,21 @@ I spend a meaningful amount of time helping teams level up—not just shipping c
 - Raising the baseline for developer experience and platform reliability
 
 *Less guesswork. More signal. Fewer late-night debugging sessions.*
+_______________________________________________________________________________
+
+## Contributions at D.E.Shaw & Co.,
+
+> I had the opportunity to work accross multiple teams and projects ranging from platform
+upgrades to JS ecosystem to Generative AI and learnt a lot through the projects that I successfully executed.
+
+#### Major projects and outcomes
+
+**1. E2E Evaluation & Observability for LLM applications**
+
+**2. Agents & LLM apps for productivity**
+
+**3. Platform & Infrastructure**
+
+**4. UI/UX components & content systems**
+
+**Appendix: Knowledge Sharing & Leadership**

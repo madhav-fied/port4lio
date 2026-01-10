@@ -1,36 +1,56 @@
-# Cards Online - Multiplayer Blackjack Platform
+## Projekt a: `Multiplayer Blackjack Platform`
 
-## Technical Architecture
+**Why?** To honor a tradition of playing cards with the boys even when they
+flew off to different parts of the world...
 
-**Stack**: TypeScript monorepo with React/Vite client, Express server, Socket.IO for real-time communication, Docker containerization.
+#### Libraries Used
 
-**Core Challenge**: Implementing stateful multiplayer game logic with real-time synchronization across distributed clients while maintaining game integrity.
+- **Client**
+    1. `React` and friends for designing all pages,
+    1. `Material UI` for few resuable components,
+    1. `Storybook` for development in isolation,
+    1. `Socket.io client` for talking to the server,
+    1. `Pnpm` for package management.
 
-## System Design
+- **Server**
+    1. `Express` for HTTP server,
+    1. `Socket.io` for persistent connections
+    1. `Pnpm` for package management.
+    1. `Node`, `Typescript` and friends for platforming
 
-### Real-time Communication Layer
+- **Docker** for deploying inside a Linux Container
 
-Socket.IO manages bidirectional event streams. Server maintains authoritative game state; clients receive state updates via event emissions. Key events: `join_game`, `place_bet`, `hit`, `stand`, `dealer_turn`. Server validates all actions before state mutation and broadcast.
+#### Overview
 
-### Game Engine
+**1. Room Management & Session Initialization**
 
-Server-side services handle deck management (Fisher-Yates shuffling), hand evaluation (Ace soft/hard values, bust detection), dealer AI (hit on 16, stand on 17+), and payout calculation (3:2 blackjack, 1:1 standard wins).
+> Players create or join game sessions via unique **alphanumeric room codes**. 
+> Room codes serve as session identifiers for WebSocket connection grouping and state partitioning.
 
-State machine enforces valid transitions: `BETTING → PLAYING → DEALER_TURN → PAYOUT → BETTING`.
+**2. Lobby State & Game Initialization**
+> The lobby functions as a pre-game state where the **host player** (first connection) triggers game start.
+> Host maintains elevated privileges for lifecycle management.
 
-### Frontend
+**3. Card Distribution & Turn Sequencing**
+> Server executes deck shuffling, deals cards to all players, and orchestrates sequential turn assignment 
+> with **server-side validation** of all actions (hit, stand, double down).
 
-React functional components with Material-UI base. Socket.IO client context provides global connection. Storybook enables isolated component development with mock game states.
+**4. Dealer Resolution & Round Settlement**
+> After player turns complete, server executes dealer AI logic (hit on 16, stand on 17).
+> Outcomes are calculated server-side and **broadcast as read-only state updates**.
 
-### Scalability Path
+**5. Post-Round Flow Control**
+> Players choose to exit session or continue playing (returns to lobby state).
+> Lobby preserves existing roster and room configuration for subsequent rounds.
 
-Current in-memory Map storage limits horizontal scaling. Planned Redis migration enables distributed state across multiple server instances, pub/sub for cross-instance events, and session persistence for player reconnection.
+**6. State Authority & Anti-Cheat Architecture**
+> Authoritative game state resides exclusively on server. Clients receive state snapshots via 
+> WebSocket and submit server-validated action requests that may be rejected if invalid.
 
-Docker Compose orchestrates local development. Production targets container orchestration (Kubernetes/ECS) with Redis cluster.
+![State Flow](./src/works/resources/Blackjack.svg)
 
-## Key Technical Decisions
+#### Hosting
 
-- **Server-authoritative state**: Prevents client-side cheating, validates all actions server-side
-- **Event-driven architecture**: Decouples game logic from transport layer
-- **TypeScript everywhere**: Type safety across client/server boundary
-- **Monorepo structure**: Shared types, independent deployments
+- Client and Server are shipped as **separate containers** with only necessary ports exposed on local network.
+- HTTP(s) connections are mapped to my homelab setup via **Cloudflare tunnel** to a reverse proxy(Nginx).
+- **Nginx reverse proxy** routes the traffic to the respective LXC.
