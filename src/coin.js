@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { update } from 'three/examples/jsm/libs/tween.module.js';
 
-const createScene = ({ background = 0x111111 } = {}) => {
+const createScene = ({ background = 0xffffff } = {}) => {
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(background);
     return scene;
@@ -43,8 +43,8 @@ function createTextTexture(text, color) {
   canvas.height = 256;
   const ctx = canvas.getContext('2d');
   ctx.fillStyle = color;
-  ctx.fillRect(0, 0, 256, 256);
-  ctx.fillStyle = '#28282B';
+  ctx.fillRect(256, 256, 256, 256);
+  ctx.fillStyle = '#FFFFFF';
   ctx.font = 'bold 160px Arial';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
@@ -63,26 +63,26 @@ const renderer = createRenderer(canvas);
 createLights(scene);
 
 
-const coinGeometry = new THREE.CylinderGeometry(2, 2, 0.25, 512)
+const coinGeometry = new THREE.CylinderGeometry(1.5, 1.5, 0.25, 512)
 
 const headTexture = createTextTexture('H', '#ffd700');
 const headsMaterial = new THREE.MeshStandardMaterial({
   map: headTexture,
-  metalness: 0.8,
-  roughness: 0.2,
+  metalness: 0.1,
+  roughness: 0.9,
 })
 
 const tailTexture = createTextTexture('T', '#ffd700');
 const tailsMaterial = new THREE.MeshStandardMaterial({
   map: tailTexture,
-  metalness: 0.8,
-  roughness: 0.2,
+  metalness: 0.1,
+  roughness: 0.9,
 })
 
 const edgeMaterial = new THREE.MeshStandardMaterial({
-  color: 0x28282b,
-  metalness: 0.6,
-  roughness: 0.3,
+  color: 0x000000,
+  metalness: 0.1,
+  roughness: 0.9,
 });
 
 const coin = new THREE.Mesh(
@@ -93,7 +93,9 @@ const coin = new THREE.Mesh(
 
 
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.target.set(0, 3, -1);
+controls.target.set(0, 1, -2);
+controls.enableRotate = false;
+controls.enableZoom = false;
 
 let isFlipping = false;
 let flipStartTime = Date.now();

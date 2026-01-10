@@ -1,17 +1,19 @@
-/* .md h1 {
-    font-size: 1rem;
+.md h1 {
+    font-size: 2rem;
 }
 
 .md h2 {
-    font-size: 1rem;
+    font-size: 1.8rem;
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 .md h3 {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .md h4 {
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 .md h5 {
@@ -24,8 +26,27 @@
 
 .md p {
     font-size: 1rem;
-} */
+}
 
-.md blockquote{
-    border-left: 1px solid red;
+.md blockquote {
+    margin: 0.5rem;
+    padding-left: 1rem;
+    border-left: 5px solid rgb(0, 0, 0, 0.7);
+}
+
+.md code {
+    color: whitesmoke;
+    background: rgb(0, 0, 0, 0.7);
+    padding-left: 4px;
+    padding-right: 4px;
+    font-style: italic;
+}
+
+.md pre {
+    background: rgb(0, 0, 0, 0.7);
+    padding: 1.5rem;
+}
+
+.md pre code {
+    background: none;
 }

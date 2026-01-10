@@ -1,5 +1,4 @@
 #full-page {
-    background-color: black;
     height: 100%;
 }
 
@@ -18,14 +17,14 @@
     font-family: "Slabo 27px", serif;
     font-weight: 400;
     font-style: normal;
-    color: #f6eee3;
+    color: black;
 }
 
 .ultra-font {
     font-family: "Ultra", serif;
     font-weight: 400;
     font-style: normal;
-    color: #eee7d7;
+    color: black;
 }
 
 #inner-container {
@@ -38,17 +37,16 @@
     min-width: 0;
     width: 100%;
     justify-content: space-evenly;
-
     /* border: 1px solid magenta; */
 }
 
 .bento-compartment {
-    border-radius: 2rem;
-    background: rgba(255, 255, 255, 0.2);
+    /* border-radius: 2rem;
+    background: rgb(71, 19, 150); */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid black;
 }
 
 #intro {
@@ -57,10 +55,18 @@
     display: flex;
 }
 
+#intro:hover {
+    transition: ease 0.2s;
+}
+
 #widgets {
     grid-column: 5 / span 5;
     grid-row: 1 / span 4;
     display: flex;
+}
+
+#widgets:hover {
+    transition: ease 0.2s;
 }
 
 #projects {
@@ -75,16 +81,28 @@
     display: flex;
 }
 
+#tech:hover {
+    transition: ease 0.2s;
+}
+
 #edu {
-    grid-column: 1 / span 6;
+    grid-column: 1 / span 5;
     grid-row: 6 / span 4;
     display: flex;
 }
 
+#edu:hover {
+    transition: ease 0.2s;
+}
+
 #switch {
-    grid-column: 7 / span 3;
+    grid-column: 6 / span 4;
     grid-row: 6 / span 4;
     display: flex;
+}
+
+#switch:hover {
+    transition: ease 0.2s;
 }
 
 .name {
@@ -95,18 +113,13 @@
     font-size: 2rem;
 }
 
-#splitter {
-    border: 1px solid seashell;
-    width: 100%;
-}
-
 .button {
     height: 3rem;
     padding: 0 2rem;
-    border-radius: 1rem;
-    background: rgb(0, 0, 0, 0.2);
+    /* border-radius: 1rem; */
+    border: 1px solid black;
+    background: white;
     background-size: 400%;
-    border: none;
     cursor: pointer;
 }
 
@@ -115,9 +128,9 @@
     z-index: 1;
 }
 
+
 .button:hover {
-    box-shadow: rgb(195,217,0.2) 2px 2px;
-    transition: ease 0.2s;
+    border: 2px solid black;
 }
 
 .button-list {
@@ -138,8 +151,8 @@
 }
 
 @keyframes marquee {
-    0% { transform: translateX(60%); }
-    100% { transform: translateX(-100%); }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 #tech-stack {
@@ -147,7 +160,7 @@
     gap: 1.5rem;
     padding: 1rem;
     flex-wrap: nowrap;
-    animation: marquee 35s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 
 .header {
@@ -168,17 +181,18 @@
 }
 
 .controls {
-    border-radius: 50%;
     height: 2rem;
     width: 2rem;
     border: none;
     cursor: pointer;
-    background: rgb(0, 0, 0, 0.2);
+    background: white;
+    border: 1px solid black;
+    /* border-radius: 50%; */
+    /* background: rgb(227, 116, 52); */
 }
 
 .controls:hover {
-    box-shadow: rgb(195,217,0.2) 2px 2px;
-    transition: ease 0.2s;
+    border: 2px solid black;
 }
 
 .contents-page {
@@ -202,15 +216,15 @@
 
 .random-canvas {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
 }
 
 #coin-flip {
-    height: 21rem;
-    width: 21rem;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
+    border: 1px solid black;
     margin-top: 1rem;
+    height: 100%;
 }
 
 /* Widgets */
@@ -231,8 +245,9 @@
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
 
-    border-radius: 2rem;
-    background: rgb(0, 0, 0, 0.2);
+    /* border-radius: 2rem; */
+    border: 1px solid black;
+    /* background: rgb(227, 116, 52); */
 
     padding: 1rem;
     flex-direction: column;
@@ -278,8 +293,9 @@
     grid-column: 1 / span 4;
     grid-row: 4 / span 1;
 
-    border-radius: 2rem;
-    background: rgb(0, 0, 0, 0.2);
+    /* border-radius: 2rem; */
+    border: 1px solid black;
+    /* background: rgb(177, 59, 255); */
 
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
@@ -297,8 +313,9 @@
     padding: 0.5rem;
     justify-content: space-evenly;
 
-    border-radius: 2rem;
-    background: rgb(0, 0, 0, 0.2);
+    /* border-radius: 2rem;
+    background: rgb(227, 116, 52); */
+    border: 1px solid black;
 }
 
 .location-city {
@@ -324,13 +341,7 @@
 }
 
 .sphere {
-    width: 4rem;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: 
-        radial-gradient(circle at 35% 25%, rgba(255,255,255,0.3) 0%, transparent 15%),
-        radial-gradient(circle at 40% 30%, #0000 4%, 57%, #000 90%),
-        linear-gradient(125deg, #2E7D32 0%, #1976D2 40%, #2E7D32 70%, #1976D2 100%)
+    width: 6rem;
 }
 
 
@@ -341,8 +352,9 @@
     grid-column: 1 / span 2;
     grid-row: 3 / span 1;
 
-    border-radius: 2rem;
-    background: rgb(0, 0, 0, 0.2);
+    /* border-radius: 2rem;
+    background: rgb(227, 116, 52); */
+    border: 1px solid black;
 }
 
 #temperature {
@@ -351,7 +363,7 @@
     width: 40%;
     
     justify-content: space-evenly;
-    border-right: 1px solid #f6eee3;
+    border-right: 1px solid black;
     padding: 0.2rem;
 }
 
@@ -374,7 +386,7 @@
 #sun-track {
     display: flex;
     flex-direction: row;
-    border-right: 1px solid #f6eee3;
+    border-right: 1px solid black;
     width: 35%;
     justify-content: space-evenly;
 }
@@ -423,8 +435,9 @@
     grid-column: 4 / span 1;
     grid-row: 2 / span 2;
     
-    border-radius: 2rem;
-    background: rgb(0, 0, 0, 0.2);
+    /* border-radius: 2rem;
+    background: rgb(227, 116, 52); */
+    border: 1px solid black;
     
     padding: 1rem;
     flex-direction: column;
@@ -462,18 +475,20 @@
 }
 
 #cgpa {
-    border-radius: 1rem;
     padding: 0.8rem;
-    background: rgb(0, 0, 0, 0.2);
+    border: 1px solid black;
+    /* border-radius: 1rem; */
+    /* background: rgb(227, 116, 52); */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #graduate-year {
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
     padding: 0.8rem;
-    background: rgb(0, 0, 0, 0.2);
+    /* background: rgb(227, 116, 52); */
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
 }
@@ -486,9 +501,11 @@
 
 #course {
     padding: 0.5rem;
-    border-radius: 2rem;
-    background: rgb(0, 0, 0, 0.2);
+    /* border-radius: 2rem; */
+    /* background: rgb(227, 116, 52); */
+    border: 1px solid black;
     width: max-content;
+    font-size: 0.8rem;
 }
 
 #achievements {
