@@ -47,7 +47,7 @@ flew off to different parts of the world...
 > Authoritative game state resides exclusively on server. Clients receive state snapshots via 
 > WebSocket and submit server-validated action requests that may be rejected if invalid.
 
-![State Flow](./src/works/resources/Blackjack.svg)
+![State Flow](./resources/Blackjack.svg)
 
 #### Hosting
 

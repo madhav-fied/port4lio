@@ -57,6 +57,6 @@ const setData = (file, selector) => {
         });
 }
 
-setData("./src/works/shaw.md", '#office-work');
-setData("./src/works/selfhost.md", '#selfhost-work');
-setData("./src/works/blackjack.md", '#project-work');
+setData("./works/shaw.md", '#office-work');
+setData("./works/selfhost.md", '#selfhost-work');
+setData("./works/blackjack.md", '#project-work');
