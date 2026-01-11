@@ -27,7 +27,7 @@ Nothing powerful for storage as of now and exists with a 2TB Barracuda HDD.
 - Connection from Nginx to Cloudflare (my DNS person) happens via a Cloudflare tunnel as I could not 
 offer a static IP and take in headaches for firewalls and other configurations.
 
-![.Homelab diagram](./resources/Apollo.svg)
+![.Homelab diagram](./works/resources/Apollo.svg)
 
 #### Live services I have
 
