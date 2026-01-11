@@ -51,8 +51,6 @@ const setData = (file, selector) => {
     parseMDContent(file)
         .then((content) => {
             setMDContent(content, element)
-            console.log(file)
-            console.log(content)
         })
         .catch((e) => {
             console.error(e);

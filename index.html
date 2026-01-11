@@ -14,6 +14,7 @@
     <script type="module" src="./src/coin.js" defer></script>
     <script type="module" src="./src/md.js" defer></script>
     <script type="module" src="./src/widgets.js" defer></script>
+    <script type="module" src="./src/links.js" defer></script>
     <meta charset="utf-8">
     <title>My first three.js app</title>
     <style>
@@ -28,15 +29,16 @@
             Narasiman Vasudevan
           </div>
           <div class="slabo-font designation">
-            Software Engineer, D. E. Shaw & Co.,
+            <span>Software Engineer,</span>
+            <span>D. E. Shaw & Co.,</span>
           </div>
           <div class="slabo-font button-list">
-            <button class="button">
-              <span class="button-content slabo-font"> Visit GitHub </span>
+            <button class="button" id="rd-github">
+              <span class="button-content slabo-font"> GitHub </span>
               <span class="fa-brands fa-github" style="color: black;"></span>
             </button>
-            <button class="button">
-              <span class="button-content slabo-font"> Visit LinkedIn </span>
+            <button class="button" id="rd-linkedin">
+              <span class="button-content slabo-font"> LinkedIn </span>
               <span class="fa-brands fa-linkedin" style="color: black;"></span>
             </button>
             
@@ -182,109 +184,109 @@
           <div id="inner-container" class="slabo-font tech-container">
             <div id="marquee">
               <div id="tech-stack">
-                <button class="button">
+                <button class="button" id="rd-fastapi">
                   <span class="button-content slabo-font">FastAPI</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-react">
                   <span class="button-content slabo-font">React</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-pydantic">
                   <span class="button-content slabo-font">Pydantic</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-langchain">
                   <span class="button-content slabo-font">LangChain</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-langgraph">
                   <span class="button-content slabo-font">LangGraph</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-pnpm">
                   <span class="button-content slabo-font">PNPM</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-express">
                   <span class="button-content slabo-font">Express</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-socketio">
                   <span class="button-content slabo-font">Socket.IO</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-asyncio">
                   <span class="button-content slabo-font">AsyncIO</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-podman">
                   <span class="button-content slabo-font">Podman</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-docker">
                   <span class="button-content slabo-font">Docker</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-k8s">
                   <span class="button-content slabo-font">Kubernetes</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-gha">
                   <span class="button-content slabo-font">GitHub Actions</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-jenkins">
                   <span class="button-content slabo-font">Jenkins</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-pytest">
                   <span class="button-content slabo-font">Pytest</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-cypress">
                   <span class="button-content slabo-font">Cypress</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-postgres">
                   <span class="button-content slabo-font">PostgreSQL</span>
                 </button>
 
                 <!-- Duplicate to smooth marquee -->
 
-                <button class="button">
+                <button class="button" id="rd-fastapi">
                   <span class="button-content slabo-font">FastAPI</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-react">
                   <span class="button-content slabo-font">React</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-pydantic">
                   <span class="button-content slabo-font">Pydantic</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-langchain">
                   <span class="button-content slabo-font">LangChain</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-langgraph">
                   <span class="button-content slabo-font">LangGraph</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-pnpm">
                   <span class="button-content slabo-font">PNPM</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-express">
                   <span class="button-content slabo-font">Express</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-socketio">
                   <span class="button-content slabo-font">Socket.IO</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-asyncio">
                   <span class="button-content slabo-font">AsyncIO</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-podman">
                   <span class="button-content slabo-font">Podman</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-docker">
                   <span class="button-content slabo-font">Docker</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-k8s">
                   <span class="button-content slabo-font">Kubernetes</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-gha">
                   <span class="button-content slabo-font">GitHub Actions</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-jenkins">
                   <span class="button-content slabo-font">Jenkins</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-pytest">
                   <span class="button-content slabo-font">Pytest</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-cypress">
                   <span class="button-content slabo-font">Cypress</span>
                 </button>
-                <button class="button">
+                <button class="button" id="rd-postgres">
                   <span class="button-content slabo-font">PostgreSQL</span>
                 </button>
 

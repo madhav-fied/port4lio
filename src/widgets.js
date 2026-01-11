@@ -141,9 +141,6 @@ sunriseTimeEle.textContent = `${String(sunriseTime.getHours()).padStart(2, '0')}
 sunsetTimeEle.textContent = `${String(sunsetTime.getHours()).padStart(2, '0')}:${String(sunsetTime.getMinutes()).padStart(2, '0')}`;
 uvIndexMaxEle.textContent = Math.round(uvIndexMax);
 
-console.log(sunriseTime)
-console.log(sunsetTime)
-
 // Weather widget end
 
 // Meta widget start
@@ -203,8 +200,6 @@ const browserTypeEle = document.querySelector('#browser-id');
 const clickCounterEle = document.querySelector('#click-counter');
 const pageReloadsEle = document.querySelector('#page-reloads');
 const tabSwitchesEle = document.querySelector('#tab-leaves');
-
-console.log(deviceType, browserInfo, pageReloads, clickCounter, tabSwitches);
 
 setInterval(() => {
   deviceTypeEle.textContent = deviceType;
