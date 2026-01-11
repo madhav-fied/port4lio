@@ -1,131 +1,52 @@
-### What I Work On (Beyond Meetings & Pull Requests)
+## Contributions at D.E.Shaw & Co.,
 
-> *Turning LLMs from “it kinda works” into systems you can **reason about, trust, and improve***  
+```
+I had the opportunity to work accross multiple teams and projects ranging from platform
+upgrades to JS ecosystem to Generative AI and learnt a lot through the projects that I successfully executed.
+```
 
-This section summarizes my impact at the intersection of **LLMs, developer productivity, and platform modernization**—with just enough personality to keep it human.
 
----
+#### Major projects and outcomes
+**1. AI Infrastructure & Evaluation**
+- **E2E Evaluation pipeline**
+> Built an end-to-end pipeline starting from creating a dataset, evaluating intermediate responses, and
+finally storing and visualizing periodic results to track performance improvements or degradation
+- **Observability for LLM apps**
+> Hosted a platform where users can trace all the intermediate steps that an Agent/LLM has taken to arrive at a
+particular result
 
-#### 🧠 Making LLM Systems Explainable & Measurable
+**Outcome:** Onboarded 6+ internal products to move from *trial-and-error methods* to **measurable AI behavior**. 
 
-I focus on building **LLM-powered systems that behave predictably**, and more importantly, **tell you *why* they behaved a certain way**.
+**2. Agents & LLM apps for productivity**
+- **Agent that crunches data from internal ticketing system**
+> Built an agent that is clever enough to fetch and present data effectively from over 100+ requests that require
+over 2+ hours of manual work for power users within a minute
+- **Internal Python Assistant**
+> Built an agent that is well-versed in answering queries about internal python libraries with an accuracy of over 70%
+- **Auto documentation generating app**
+> Collaborated in building an app that generates docstrings for JS, Python, or Java code deterministically via ASTs
 
-##### What that looks like in practice:
-- **RAG evaluation frameworks**  
-  Measuring retrieval quality, grounding, and answer usefulness—so decisions aren’t based on vibes.
-- **End-to-end observability for LLM apps**  
-  Tracking prompts, retrieval context, responses, and downstream effects to answer:
-  > “Why did the model do that?”
-- **Reasoning-first design**  
-  Treating LLMs as *systems*, not magic APIs—designed for iteration, debugging, and confidence.
+**3. Platform & Infrastructure**
+- **Client library and utilities to access and build LLM apps**
+> Maintain and build python utilities that help business teams connect to LLM Gateway and build apps
+- **Move CI and CD infrastructure from Jenkins to GitHub Actions**
+> Facilitated shared actions and collaborated with multiple teams to demonstrate and establish their GitHub
+workflows post deprecation of Jenkins
+- **Firmwide migration to Node 20**
+> Upgraded to Node 20 from Node 16, ensuring all existing systems remain intact and also addressed queries from teams
 
-**Outcome:**  
-Teams move from *trial-and-error prompting* to **measurable, explainable AI behavior**.
+**4. UI/UX components & content systems**
+- 3+ Business components to Firmwide UI library
+> Added and contributed enhancements to a firmwide reusable library for frontend components in React
+- Contributions to an internal WYSIWYG web editor component
+> Added a floating menu to enable quick edits on text selection
+> Ensured content compatibility with Microsoft content systems backed by thorough tests
 
----
+**5. Appendix: Knowledge Sharing & Leadership**
 
-#### 🤖 Agents & Apps That Actually Save Time
-
-##### 🧙 Internal Python Documentation Wizard  
-Helps engineers understand large, legacy Python codebases quickly—without spelunking through files.
-
-- Natural-language exploration of internal libraries
-- Context-aware explanations tied to real code
-- Dramatically reduced onboarding and “who knows this?” pings
-
-##### ⚡ JIRA Search & Crunch Engine  
-What used to take **hours of manual searching** now takes **under a minute**.
-
-- Summarizes ticket updates, discussions, and history
-- Pulls signal from noisy comment threads
-- Designed for fast decision-making, not reporting theater
-
----
-
-#### 🛠️ Developer Tooling Upgrades
-
-Better tools → better docs → better LLM outputs.
-
-##### Key Contributions:
-- **Auto docstring generation**  
-  Consistent, high-quality documentation that benefits both humans *and* LLM-based tooling.
-- **Claude Skill Set & Internal Marketplace**  
-  Reusable AI capabilities teams can plug into their repos without re-inventing workflows.
-- **Storybook-driven UI development**  
-  Component-first development that improves quality, velocity, and design collaboration.
-
----
-
-#### 🏗️ Platform & Infrastructure Work (The Quiet Multipliers)
-
-Not flashy, but foundational.
-
-##### 🚀 Modernization Efforts
-- **Firmwide migration to Node 20**  
-  Improved performance, security posture, and runtime consistency.
-- **Jenkins → GitHub Actions migrations**  
-  Helped multiple teams move to simpler, more maintainable CI/CD pipelines.
-
-**Impact:**
-- Faster builds & deploys
-- Less operational friction
-- Fewer “only one person knows how this works” systems
-
----
-
-#### 🎨 UI & Content Systems
-
-Building UI foundations that scale across teams and use cases.
-
-- **Reusable business component library**  
-  Shared, composable components that significantly reduce duplicate work.
-- **WYSIWYG web editor**  
-  Designed to be compatible with Microsoft content systems—bridging modern web UX with enterprise constraints.
-
----
-
-#### 📢 Knowledge Sharing & Technical Leadership
-
-I spend a meaningful amount of time helping teams level up—not just shipping code.
-
-##### Internal Talks & Enablement
-- **Building effective RAG systems**  
-  Practical guidance on retrieval strategies, evaluation, and failure modes.
-- **CI/CD migration best practices**  
-  How to modernize pipelines without disrupting delivery.
-- **LLM integration patterns & eval pipelines**  
-  Helping teams adopt LLMs responsibly, with clear quality signals.
-
+- Led and conducted tech-talks that help in other teams gaining more AI and Infrastruce potentials.
 | Area | Format | Outcome |
 |-----|------|--------|
 | RAG Systems | Tech Talks | Teams shipping production-grade RAG |
 | CI/CD | Workshops | Multiple team migrations completed |
 | LLM Evaluation | Hands-on Sessions | Shared org-wide patterns |
-
----
-
-#### Current Focus
-
-- Helping teams ship LLM features **with confidence**
-- Reducing ambiguity in AI-driven systems
-- Raising the baseline for developer experience and platform reliability
-
-*Less guesswork. More signal. Fewer late-night debugging sessions.*
-_______________________________________________________________________________
-
-## Contributions at D.E.Shaw & Co.,
-
-> I had the opportunity to work accross multiple teams and projects ranging from platform
-upgrades to JS ecosystem to Generative AI and learnt a lot through the projects that I successfully executed.
-
-#### Major projects and outcomes
-
-**1. E2E Evaluation & Observability for LLM applications**
-
-**2. Agents & LLM apps for productivity**
-
-**3. Platform & Infrastructure**
-
-**4. UI/UX components & content systems**
-
-**Appendix: Knowledge Sharing & Leadership**

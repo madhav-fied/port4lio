@@ -55,3 +55,16 @@
     width: 80%;
     padding: 2em;
 }
+
+.md table {
+    padding-left: 24px;
+    border-spacing: 8px;
+}
+
+.md td {
+    border-bottom: 1px solid black;
+}
+
+.md th {
+    border-bottom: 3px solid black;
+}
