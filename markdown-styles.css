@@ -1,36 +1,36 @@
 .md h1 {
-    font-size: 2rem;
+    font-size: 1.250vw;
 }
 
 .md h2 {
-    font-size: 1.8rem;
+    font-size: 1.125vw;
 }
 
 .md h3 {
-    font-size: 1.5rem;
+    font-size: 0.9375vw;
 }
 
 .md h4 {
-    font-size: 1.2rem;
+    font-size: 0.75vw;
     text-decoration: underline;
     text-underline-offset: 5px;
 }
 
 .md h5 {
-    font-size: 1rem;
+    font-size: 0.625vw;
 }
 
 .md h6 {
-    font-size: 1rem;
+    font-size: 0.625vw;
 }
 
 .md p {
-    font-size: 1rem;
+    font-size: 0.625vw;
 }
 
 .md blockquote {
-    margin: 0.5rem;
-    padding-left: 1rem;
+    margin: 0.3125vw;
+    padding-left: 0.625vw;
     border-left: 5px solid rgb(0, 0, 0, 0.7);
 }
 
@@ -44,7 +44,7 @@
 
 .md pre {
     background: rgb(0, 0, 0, 0.7);
-    padding: 1.5rem;
+    padding: 0.9375vw;
 }
 
 .md pre code {
