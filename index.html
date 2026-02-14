@@ -1,411 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&family=Ultra&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="markdown-styles.css">
-    
-    <script src="https://kit.fontawesome.com/e6e4069c41.js" crossorigin="anonymous"></script>
 
-    <script type="module" src="./src/pages.js" defer></script>
-    <script type="module" src="./src/coin.js" defer></script>
-    <script type="module" src="./src/md.js" defer></script>
-    <script type="module" src="./src/widgets.js" defer></script>
-    <script type="module" src="./src/links.js" defer></script>
-    <meta charset="utf-8">
-    <title>Narasiman Vasudevan 🐣</title>
-    <style>
-      body { margin: 0; }
-      </style>
-  </head>
-  <body id="full-page">
-    <div id="grid">
-      <div id="intro" class="bento-compartment">
-        <div id="inner-container">
-          <div class="ultra-font name">
-            Narasiman Vasudevan
-          </div>
-          <div class="slabo-font designation">
-            <span>Software Engineer,</span>
-            <span>D. E. Shaw & Co.,</span>
-          </div>
-          <div class="slabo-font button-list">
-            <button class="button" id="rd-github">
-              <span class="button-content slabo-font"> GitHub </span>
-              <span class="fa-brands fa-github" style="color: black;"></span>
-            </button>
-            <button class="button" id="rd-linkedin">
-              <span class="button-content slabo-font"> LinkedIn </span>
-              <span class="fa-brands fa-linkedin" style="color: black;"></span>
-            </button>
-            
-          </div>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&family=Ultra&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="markdown-styles.css">
+
+  <script src="https://kit.fontawesome.com/e6e4069c41.js" crossorigin="anonymous"></script>
+
+  <script type="module" src="./src/pages.js" defer></script>
+  <script type="module" src="./src/coin.js" defer></script>
+  <script type="module" src="./src/md.js" defer></script>
+  <script type="module" src="./src/widgets.js" defer></script>
+  <script type="module" src="./src/links.js" defer></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Narasiman Vasudevan 🐣</title>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body id="full-page">
+  <div id="grid">
+    <div id="intro" class="bento-compartment">
+      <div id="inner-container">
+        <div class="ultra-font name">
+          Narasiman Vasudevan
+        </div>
+        <div class="slabo-font designation">
+          <span>Software Engineer,</span>
+          <span>D. E. Shaw & Co.,</span>
+        </div>
+        <div class="slabo-font button-list">
+          <button class="button" id="rd-github">
+            <span class="button-content slabo-font"> GitHub </span>
+            <span class="fa-brands fa-github" style="color: black;"></span>
+          </button>
+          <button class="button" id="rd-linkedin">
+            <span class="button-content slabo-font"> LinkedIn </span>
+            <span class="fa-brands fa-linkedin" style="color: black;"></span>
+          </button>
+
         </div>
       </div>
-      
-      <div id="widgets" class="bento-compartment">
-        <div id="inner-container">
-          <div id="widgets-frame">
-            <div id="title-widget" class="ultra-font title-widget">
-              Widgets
-            </div>
-            <div id="time-widget">
+    </div>
 
-              <div id="current-time" class="ultra-font">
-                <div id="clock">
-                  <div class="rotate-time" id="hours">
-                    00
-                  </div>
-                  :
-                  <div class="rotate-time" id="minutes">
-                    00
-                  </div>
-                  :
-                  <div class="rotate-time" id="seconds">
-                    00
-                  </div>
-                </div>
-
-                <div id="time-diff" class="slabo-font">
-                  UTC +5:30
-                </div>
-              </div>
-
-              <div id="date-current" class="slabo-font">
-                xxx
-              </div>
-
-            </div>
-
-            <div id="location-widget">
-
-              <div class="slabo-font location-city">
-                <span class="fa-solid fa-location-crosshairs fa-xs" style="color: #000000;"></span>
-                <div class="location-text">
-                  <div>Hyderabad,</div>
-                  <div style="font-size: 1rem;">India</div>
-                </div>
-              </div>
-
-              <div class="slabo-font location-coord">
-                <div>17.4065° N</div>
-                <div>78.4772° E</div>
-              </div>
-
-              <div class="sphere">
-                <img src="./globe.svg" alt="earth">
-              </div>
-
-            </div>
-            <div id="thought-widget" class="slabo-font though-of-the-time">
-
-            </div>
-
-            <div id="weather-widget" class="slabo-font">
-
-              <div id="temperature">
-                <div id="current-temp">
-                  <span class="fa-solid fa-temperature-empty fa-sm"></span>
-                  <span id="current-temp-value">22°</span>
-                </div>
-                <div id="min-max-temp">
-                  <div>
-                    <span class="fa-solid fa-arrow-trend-up"></span>
-                    <span id="max-temp">35°</span>
-                  </div>
-
-                  <div>
-                    <span class="fa-solid fa-arrow-trend-down"></span>
-                    <span id="min-temp">12°</span>
-                  </div>
-                </div>
-              </div>
-
-              <div id="sun-track">
-                <div id="sun-icons">
-                  <span>rise</span>
-                  <span class="fa-solid fa-sun fa-sm"></span>
-                  <span>set</span>
-                </div>
-
-                <div id="sun-track-data">
-                  <div id="sunrise-time">
-                    06:12
-                  </div>
-                  <div id="sunset-time">
-                    17:56
-                  </div>
-                </div>
-              </div>
-                
-              <div id="uv-index">
-                <span>UV</span>
-                <span id="uv-value">47</span>
-              </div>
-
-            </div>
-
-
-            <div id="meta-widget" class="slabo-font">
-              <div class="session-meta">
-                <span>Browser: </span>
-                <span id="browser-id">-</span>
-              </div>
-
-              <div class="session-meta">
-                <span>Device: </span>
-                <span id="device-id">-</span>
-              </div>
-
-              <div class="session-meta">
-                <span>#Clicks: </span>
-                <span id="click-counter">0</span>
-              </div>
-
-              <div class="session-meta">
-                <span>#Refreshes: </span>
-                <span id="page-reloads">0</span>
-              </div>
-
-              <div class="session-meta">
-                <span>#Tab left: </span>
-                <span id="tab-leaves">0</span>
-              </div>
-
-            </div>
+    <div id="widgets" class="bento-compartment">
+      <div id="inner-container">
+        <div id="widgets-frame">
+          <div id="title-widget" class="ultra-font title-widget">
+            Widgets
           </div>
-        </div>
-      </div>
+          <div id="time-widget">
 
-      <div id="tech" class="bento-compartment">
-          <div id="inner-container" class="slabo-font tech-container">
-            <div id="marquee">
-              <div id="tech-stack">
-                <button class="button" id="rd-fastapi">
-                  <span class="button-content slabo-font">FastAPI</span>
-                </button>
-                <button class="button" id="rd-react">
-                  <span class="button-content slabo-font">React</span>
-                </button>
-                <button class="button" id="rd-pydantic">
-                  <span class="button-content slabo-font">Pydantic</span>
-                </button>
-                <button class="button" id="rd-langchain">
-                  <span class="button-content slabo-font">LangChain</span>
-                </button>
-                <button class="button" id="rd-langgraph">
-                  <span class="button-content slabo-font">LangGraph</span>
-                </button>
-                <button class="button" id="rd-pnpm">
-                  <span class="button-content slabo-font">PNPM</span>
-                </button>
-                <button class="button" id="rd-express">
-                  <span class="button-content slabo-font">Express</span>
-                </button>
-                <button class="button" id="rd-socketio">
-                  <span class="button-content slabo-font">Socket.IO</span>
-                </button>
-                <button class="button" id="rd-asyncio">
-                  <span class="button-content slabo-font">AsyncIO</span>
-                </button>
-                <button class="button" id="rd-podman">
-                  <span class="button-content slabo-font">Podman</span>
-                </button>
-                <button class="button" id="rd-docker">
-                  <span class="button-content slabo-font">Docker</span>
-                </button>
-                <button class="button" id="rd-k8s">
-                  <span class="button-content slabo-font">Kubernetes</span>
-                </button>
-                <button class="button" id="rd-gha">
-                  <span class="button-content slabo-font">GitHub Actions</span>
-                </button>
-                <button class="button" id="rd-jenkins">
-                  <span class="button-content slabo-font">Jenkins</span>
-                </button>
-                <button class="button" id="rd-pytest">
-                  <span class="button-content slabo-font">Pytest</span>
-                </button>
-                <button class="button" id="rd-cypress">
-                  <span class="button-content slabo-font">Cypress</span>
-                </button>
-                <button class="button" id="rd-postgres">
-                  <span class="button-content slabo-font">PostgreSQL</span>
-                </button>
-
-                <!-- Duplicate to smooth marquee -->
-
-                <button class="button" id="rd-fastapi">
-                  <span class="button-content slabo-font">FastAPI</span>
-                </button>
-                <button class="button" id="rd-react">
-                  <span class="button-content slabo-font">React</span>
-                </button>
-                <button class="button" id="rd-pydantic">
-                  <span class="button-content slabo-font">Pydantic</span>
-                </button>
-                <button class="button" id="rd-langchain">
-                  <span class="button-content slabo-font">LangChain</span>
-                </button>
-                <button class="button" id="rd-langgraph">
-                  <span class="button-content slabo-font">LangGraph</span>
-                </button>
-                <button class="button" id="rd-pnpm">
-                  <span class="button-content slabo-font">PNPM</span>
-                </button>
-                <button class="button" id="rd-express">
-                  <span class="button-content slabo-font">Express</span>
-                </button>
-                <button class="button" id="rd-socketio">
-                  <span class="button-content slabo-font">Socket.IO</span>
-                </button>
-                <button class="button" id="rd-asyncio">
-                  <span class="button-content slabo-font">AsyncIO</span>
-                </button>
-                <button class="button" id="rd-podman">
-                  <span class="button-content slabo-font">Podman</span>
-                </button>
-                <button class="button" id="rd-docker">
-                  <span class="button-content slabo-font">Docker</span>
-                </button>
-                <button class="button" id="rd-k8s">
-                  <span class="button-content slabo-font">Kubernetes</span>
-                </button>
-                <button class="button" id="rd-gha">
-                  <span class="button-content slabo-font">GitHub Actions</span>
-                </button>
-                <button class="button" id="rd-jenkins">
-                  <span class="button-content slabo-font">Jenkins</span>
-                </button>
-                <button class="button" id="rd-pytest">
-                  <span class="button-content slabo-font">Pytest</span>
-                </button>
-                <button class="button" id="rd-cypress">
-                  <span class="button-content slabo-font">Cypress</span>
-                </button>
-                <button class="button" id="rd-postgres">
-                  <span class="button-content slabo-font">PostgreSQL</span>
-                </button>
-
+            <div id="current-time" class="ultra-font">
+              <div id="clock">
+                <div class="rotate-time" id="hours">
+                  00
+                </div>
+                :
+                <div class="rotate-time" id="minutes">
+                  00
+                </div>
+                :
+                <div class="rotate-time" id="seconds">
+                  00
+                </div>
               </div>
-            </div>
-          </div>
-      </div>
 
-      <div id="projects" class="bento-compartment">
-        <div id="inner-container">
-          <div class="work-pages">
-
-            <div class="header" id="work-header">
-              <div class="ultra-font">Creations of my Keyboard & I</div>
-              <div>
-                <button class="controls prev-btn">
-                  <span class="fa-solid fa-arrow-right fa-flip-horizontal" style="color: #000;"></span>
-                </button>
-                <button class="controls next-btn">
-                  <span class="fa-solid fa-arrow-right" style="color: #000;"></span>
-                </button>
+              <div id="time-diff" class="slabo-font">
+                UTC +5:30
               </div>
             </div>
 
-            <div class="works-page slabo-font">
-              <div class="page active large-page md" id="office-work">
-                Hi
-              </div>
-              <div class="page large-page md" id="project-work">
-                More stuff coming soon!!!
-              </div>
-              <div class="page large-page md" id="selfhost-work">
-                Yayy
-              </div>
+            <div id="date-current" class="slabo-font">
+              xxx
             </div>
 
           </div>
-          
-        </div>
-      </div>
 
-      <div id="edu" class="bento-compartment">
-        <div id="inner-container">
-          <div id="edu-container">
-            <div id="header-edu" class="ultra-font">
-              Academic Background
-            </div>
+          <div id="location-widget">
 
-            <div id="course-college-year-cgpa">
-              <div id="course-college" class="slabo-font">
-                <div id="degree">B.E. Computer Science and Engineering</div>
-                <div id="college">Coimbatore Institue of Technology</div>
-              </div>
-              <div id="cgpa" class="slabo-font">
-                <span>CGPA</span>
-                <span>9.4</span>
-              </div>
-              <div id="graduate-year" class="slabo-font">
-                <span>Year</span>
-                <span>2023</span>
+            <div class="slabo-font location-city">
+              <span class="fa-solid fa-location-crosshairs fa-xs" style="color: #000000;"></span>
+              <div class="location-text">
+                <div>Hyderabad,</div>
+                <div style="font-size: 1rem;">India</div>
               </div>
             </div>
 
-            <div id="courseworks" class="slabo-font">
-              <div id="course-header" class="ultra-font">Course work</div>
-              <div id="courses">
-                <div id="course">Data Structures and Algorithms</div>
-                <div id="course">Operating Systems</div>
-                <div id="course">Coumputer Networks</div>
-                <div id="course">Database Management Systems</div>
-              </div>
+            <div class="slabo-font location-coord">
+              <div>17.4065° N</div>
+              <div>78.4772° E</div>
             </div>
 
-            <div id="edu-highlights" class="slabo-font">
-              <div id="edu-highlights-header" class="ultra-font">Highlights</div>
-              <div id="achievements">
-                <div id="achievement">- Best Outgoing Student - CSE 2023</div>
-                <div id="achievement">- Sports Secretary for the year 2023</div>
-                <div id="achievement">- Led Linux migration and setups across all labs</div>
-              </div>
+            <div class="sphere">
+              <img src="./globe.svg" alt="earth">
             </div>
+
           </div>
-        </div>
-      </div>
+          <div id="thought-widget" class="slabo-font though-of-the-time">
 
-      <div id="switch" class="bento-compartment">
-        <div id="inner-container">
-          <div class="pages-random">
+          </div>
 
-            <div class="header toys">
-              <div class="ultra-font">
-                Random Stuff
+          <div id="weather-widget" class="slabo-font">
+
+            <div id="temperature">
+              <div id="current-temp">
+                <span class="fa-solid fa-temperature-empty fa-sm"></span>
+                <span id="current-temp-value">22°</span>
               </div>
-              <div>
-                <button class="controls prev-btn">
-                  <span class="fa-solid fa-arrow-right fa-flip-horizontal" style="color: #000;"></span>
-                </button>
-                <button class="controls next-btn">
-                  <span class="fa-solid fa-arrow-right" style="color: #000;"></span>
-                </button>
+              <div id="min-max-temp">
+                <div>
+                  <span class="fa-solid fa-arrow-trend-up"></span>
+                  <span id="max-temp">35°</span>
+                </div>
+
+                <div>
+                  <span class="fa-solid fa-arrow-trend-down"></span>
+                  <span id="min-temp">12°</span>
+                </div>
               </div>
             </div>
 
-            <div class="contents-page slabo-font">
-              <div class="page active random-canvas">
-                <button id="canvas-coin-flip" class="button">
-                  <span class="button-content slabo-font">Flip!</span>
-                </button>
-                <canvas id="coin-flip"></canvas>
+            <div id="sun-track">
+              <div id="sun-icons">
+                <span>rise</span>
+                <span class="fa-solid fa-sun fa-sm"></span>
+                <span>set</span>
               </div>
-              <div class="page">
-                More stuff coming soon!!!
+
+              <div id="sun-track-data">
+                <div id="sunrise-time">
+                  06:12
+                </div>
+                <div id="sunset-time">
+                  17:56
+                </div>
               </div>
+            </div>
+
+            <div id="uv-index">
+              <span>UV</span>
+              <span id="uv-value">47</span>
+            </div>
+
+          </div>
+
+
+          <div id="meta-widget" class="slabo-font">
+            <div class="session-meta">
+              <span>Browser: </span>
+              <span id="browser-id">-</span>
+            </div>
+
+            <div class="session-meta">
+              <span>Device: </span>
+              <span id="device-id">-</span>
+            </div>
+
+            <div class="session-meta">
+              <span>#Clicks: </span>
+              <span id="click-counter">0</span>
+            </div>
+
+            <div class="session-meta">
+              <span>#Refreshes: </span>
+              <span id="page-reloads">0</span>
+            </div>
+
+            <div class="session-meta">
+              <span>#Tab left: </span>
+              <span id="tab-leaves">0</span>
             </div>
 
           </div>
         </div>
       </div>
     </div>
-  </body>
+
+    <div id="tech" class="bento-compartment">
+      <div id="inner-container" class="slabo-font tech-container">
+        <div id="marquee">
+          <div id="tech-stack">
+            <button class="button" id="rd-fastapi">
+              <span class="button-content slabo-font">FastAPI</span>
+            </button>
+            <button class="button" id="rd-react">
+              <span class="button-content slabo-font">React</span>
+            </button>
+            <button class="button" id="rd-pydantic">
+              <span class="button-content slabo-font">Pydantic</span>
+            </button>
+            <button class="button" id="rd-langchain">
+              <span class="button-content slabo-font">LangChain</span>
+            </button>
+            <button class="button" id="rd-langgraph">
+              <span class="button-content slabo-font">LangGraph</span>
+            </button>
+            <button class="button" id="rd-pnpm">
+              <span class="button-content slabo-font">PNPM</span>
+            </button>
+            <button class="button" id="rd-express">
+              <span class="button-content slabo-font">Express</span>
+            </button>
+            <button class="button" id="rd-socketio">
+              <span class="button-content slabo-font">Socket.IO</span>
+            </button>
+            <button class="button" id="rd-asyncio">
+              <span class="button-content slabo-font">AsyncIO</span>
+            </button>
+            <button class="button" id="rd-podman">
+              <span class="button-content slabo-font">Podman</span>
+            </button>
+            <button class="button" id="rd-docker">
+              <span class="button-content slabo-font">Docker</span>
+            </button>
+            <button class="button" id="rd-k8s">
+              <span class="button-content slabo-font">Kubernetes</span>
+            </button>
+            <button class="button" id="rd-gha">
+              <span class="button-content slabo-font">GitHub Actions</span>
+            </button>
+            <button class="button" id="rd-jenkins">
+              <span class="button-content slabo-font">Jenkins</span>
+            </button>
+            <button class="button" id="rd-pytest">
+              <span class="button-content slabo-font">Pytest</span>
+            </button>
+            <button class="button" id="rd-cypress">
+              <span class="button-content slabo-font">Cypress</span>
+            </button>
+            <button class="button" id="rd-postgres">
+              <span class="button-content slabo-font">PostgreSQL</span>
+            </button>
+
+            <!-- Duplicate to smooth marquee -->
+
+            <button class="button" id="rd-fastapi">
+              <span class="button-content slabo-font">FastAPI</span>
+            </button>
+            <button class="button" id="rd-react">
+              <span class="button-content slabo-font">React</span>
+            </button>
+            <button class="button" id="rd-pydantic">
+              <span class="button-content slabo-font">Pydantic</span>
+            </button>
+            <button class="button" id="rd-langchain">
+              <span class="button-content slabo-font">LangChain</span>
+            </button>
+            <button class="button" id="rd-langgraph">
+              <span class="button-content slabo-font">LangGraph</span>
+            </button>
+            <button class="button" id="rd-pnpm">
+              <span class="button-content slabo-font">PNPM</span>
+            </button>
+            <button class="button" id="rd-express">
+              <span class="button-content slabo-font">Express</span>
+            </button>
+            <button class="button" id="rd-socketio">
+              <span class="button-content slabo-font">Socket.IO</span>
+            </button>
+            <button class="button" id="rd-asyncio">
+              <span class="button-content slabo-font">AsyncIO</span>
+            </button>
+            <button class="button" id="rd-podman">
+              <span class="button-content slabo-font">Podman</span>
+            </button>
+            <button class="button" id="rd-docker">
+              <span class="button-content slabo-font">Docker</span>
+            </button>
+            <button class="button" id="rd-k8s">
+              <span class="button-content slabo-font">Kubernetes</span>
+            </button>
+            <button class="button" id="rd-gha">
+              <span class="button-content slabo-font">GitHub Actions</span>
+            </button>
+            <button class="button" id="rd-jenkins">
+              <span class="button-content slabo-font">Jenkins</span>
+            </button>
+            <button class="button" id="rd-pytest">
+              <span class="button-content slabo-font">Pytest</span>
+            </button>
+            <button class="button" id="rd-cypress">
+              <span class="button-content slabo-font">Cypress</span>
+            </button>
+            <button class="button" id="rd-postgres">
+              <span class="button-content slabo-font">PostgreSQL</span>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="projects" class="bento-compartment">
+      <div id="inner-container">
+        <div class="work-pages">
+
+          <div class="header" id="work-header">
+            <div class="ultra-font">Creations of my Keyboard & I</div>
+            <div>
+              <button class="controls prev-btn">
+                <span class="fa-solid fa-arrow-right fa-flip-horizontal" style="color: #000;"></span>
+              </button>
+              <button class="controls next-btn">
+                <span class="fa-solid fa-arrow-right" style="color: #000;"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="works-page slabo-font">
+            <div class="page active large-page md" id="office-work">
+              Hi
+            </div>
+            <div class="page large-page md" id="project-work">
+              More stuff coming soon!!!
+            </div>
+            <div class="page large-page md" id="selfhost-work">
+              Yayy
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div id="edu" class="bento-compartment">
+      <div id="inner-container">
+        <div id="edu-container">
+          <div id="header-edu" class="ultra-font">
+            Academic Background
+          </div>
+
+          <div id="course-college-year-cgpa">
+            <div id="course-college" class="slabo-font">
+              <div id="degree">B.E. Computer Science and Engineering</div>
+              <div id="college">Coimbatore Institue of Technology</div>
+            </div>
+            <div id="cgpa" class="slabo-font">
+              <span>CGPA</span>
+              <span>9.4</span>
+            </div>
+            <div id="graduate-year" class="slabo-font">
+              <span>Year</span>
+              <span>2023</span>
+            </div>
+          </div>
+
+          <div id="courseworks" class="slabo-font">
+            <div id="course-header" class="ultra-font">Course work</div>
+            <div id="courses">
+              <div id="course">Data Structures and Algorithms</div>
+              <div id="course">Operating Systems</div>
+              <div id="course">Coumputer Networks</div>
+              <div id="course">Database Management Systems</div>
+            </div>
+          </div>
+
+          <div id="edu-highlights" class="slabo-font">
+            <div id="edu-highlights-header" class="ultra-font">Highlights</div>
+            <div id="achievements">
+              <div id="achievement">- Best Outgoing Student - CSE 2023</div>
+              <div id="achievement">- Sports Secretary for the year 2023</div>
+              <div id="achievement">- Led Linux migration and setups across all labs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="switch" class="bento-compartment">
+      <div id="inner-container">
+        <div class="pages-random">
+
+          <div class="header toys">
+            <div class="ultra-font">
+              Random Stuff
+            </div>
+            <div>
+              <button class="controls prev-btn">
+                <span class="fa-solid fa-arrow-right fa-flip-horizontal" style="color: #000;"></span>
+              </button>
+              <button class="controls next-btn">
+                <span class="fa-solid fa-arrow-right" style="color: #000;"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="contents-page slabo-font">
+            <div class="page active random-canvas">
+              <button id="canvas-coin-flip" class="button">
+                <span class="button-content slabo-font">Flip!</span>
+              </button>
+              <canvas id="coin-flip"></canvas>
+            </div>
+            <div class="page">
+              More stuff coming soon!!!
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
-    
