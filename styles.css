@@ -495,7 +495,7 @@
 
 /* Responsive */
 
-@media (max-width: 1080px) {
+@media (max-width: 1440px) {
     #grid {
         display: grid;
         width: 100%;
@@ -551,7 +551,7 @@
         grid-row: auto;
         display: flex;
         order: 3;
-        min-height: 100dvh;
+        min-height: 90dvh;
     }
 
     #edu {
