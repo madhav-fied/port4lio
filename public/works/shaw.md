@@ -1,9 +1,9 @@
 ## Contributions at D.E.Shaw & Co.,
 
-```
+<!-- ```
 I had the opportunity to work accross multiple teams and projects ranging from platform
 upgrades to JS ecosystem to Generative AI and learnt a lot through the projects that I successfully executed.
-```
+``` -->
 
 
 #### Major projects and outcomes

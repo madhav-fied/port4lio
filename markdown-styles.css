@@ -1,37 +1,37 @@
 .md h1 {
-    font-size: 2rem;
+    font-size: clamp(1rem, 2dvw, 2rem);
 }
 
 .md h2 {
-    font-size: 1.8rem;
+    font-size: clamp(0.9rem, 1.8dvw, 1.8rem);
 }
 
 .md h3 {
-    font-size: 1.5rem;
+    font-size: clamp(0.75rem, 1.5dvw, 1.5rem);
 }
 
 .md h4 {
-    font-size: 1.2rem;
+    font-size: clamp(0.6rem, 1.2dvw, 1.2rem);
     text-decoration: underline;
     text-underline-offset: 5px;
 }
 
 .md h5 {
-    font-size: 1rem;
+    font-size: clamp(0.5rem, 1dvw, 1rem);
 }
 
 .md h6 {
-    font-size: 1rem;
+    font-size: clamp(0.5rem, 1dvw, 1rem);
 }
 
 .md p {
-    font-size: 1rem;
+    font-size: clamp(0.5rem, 1dvw, 1rem);
 }
 
 .md blockquote {
     margin: 0.5rem;
-    padding-left: 1rem;
-    border-left: 5px solid rgb(0, 0, 0, 0.7);
+    padding-left: clamp(0.5rem, 1dvw, 1rem);
+    border-left: clamp(2px, 5px, 5px) solid rgb(0, 0, 0, 0.7);
 }
 
 .md code {
@@ -44,16 +44,19 @@
 
 .md pre {
     background: rgb(0, 0, 0, 0.7);
-    padding: 1.5rem;
+    padding: clamp(0.75rem, 1.5dvw, 1.5rem);
 }
 
 .md pre code {
     background: none;
+    font-size: clamp(0.5rem, 0.9dvw, 0.9rem);
+    overflow-wrap: break-word;
+
 }
 
 .md img {
     width: 80%;
-    padding: 2em;
+    padding: clamp(1em, 2dvw, 2em);
 }
 
 .md table {
@@ -67,4 +70,8 @@
 
 .md th {
     border-bottom: 3px solid black;
+}
+
+.md ul {
+    padding-left: clamp(1rem, 2dvw, 2rem);
 }
