@@ -34,6 +34,7 @@ const downloadFile = (filePath, fileName) => {
     const anchor = document.createElement('a');
     anchor.href = filePath;
     anchor.download = fileName;
+    anchor.setAttribute('type', 'application/pdf');
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
@@ -41,5 +42,5 @@ const downloadFile = (filePath, fileName) => {
 
 const resumeDownloadButton = document.querySelector(`#dl-resume`)
 resumeDownloadButton.addEventListener('click', () => {
-    downloadFile("./Narasiman Resume.pdf", "Narasiman Resume.pdf");
+    downloadFile("/Narasiman_Resume.pdf", "Narasiman_Resume.pdf");
 });
