@@ -96,7 +96,7 @@
 
 .button {
     height: clamp(1.5rem, 3dvh, 3rem);
-    padding: 0 clamp(1rem, 2dvw, 2rem);
+    padding: 0 clamp(0.5rem, 1dvw, 1rem);
     border: 1px solid black;
     background: white;
     background-size: 400%;
@@ -104,10 +104,9 @@
 }
 
 .button-content {
-    font-size: clamp(0.6rem, 1dvw, 1rem);
+    font-size: clamp(0.5rem, 1dvw, 1rem);
     z-index: 1;
 }
-
 
 .button:hover {
     border: 2px solid black;
