@@ -1,25 +1,24 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { update } from 'three/examples/jsm/libs/tween.module.js';
 
 const createScene = ({ background = 0xffffff } = {}) => {
-    const scene = new THREE.Scene();
-    scene.background = new THREE.Color(background);
-    return scene;
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(background);
+  return scene;
 }
-  
+
 const createCamera = () => {
   const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
   camera.position.set(0, 8, 8);
   return camera;
 }
-  
+
 const createRenderer = (canvas) => {
-  const renderer = new THREE.WebGLRenderer({canvas});
+  const renderer = new THREE.WebGLRenderer({ canvas });
   renderer.setPixelRatio(window.devicePixelRatio);
   return renderer;
 }
-  
+
 function resizeRenderer(renderer, camera, canvas) {
   const width = canvas.clientWidth;
   const height = canvas.clientHeight;
@@ -49,7 +48,7 @@ function createTextTexture(text, color) {
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillText(text, 128, 128);
-  
+
   const texture = new THREE.CanvasTexture(canvas);
   return texture;
 }
@@ -86,7 +85,7 @@ const edgeMaterial = new THREE.MeshStandardMaterial({
 });
 
 const coin = new THREE.Mesh(
-  coinGeometry, 
+  coinGeometry,
   [edgeMaterial, headsMaterial, tailsMaterial]
 );
 
