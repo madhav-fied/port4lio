@@ -207,6 +207,66 @@
     height: 100%;
 }
 
+.music {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2dvh, 2rem);
+    padding-top: clamp(1rem, 2dvh, 2rem);
+}
+
+.swaras-button-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: clamp(6rem, 12dvh, 12rem);
+
+}
+
+.swara {
+    background: white;
+    font-size: clamp(0.5rem, 1dvw, 1rem);
+    height: clamp(3rem, 6dvh, 6rem);
+    width: clamp(3rem, 6dvw, 6rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-right: none;
+}
+
+.mandra-sthayi {
+    display: none;
+}
+
+.mandra-sthayi.active-sthayi {
+    display: revert;
+}
+
+.taara-sthayi {
+    display: none;
+}
+
+.taara-sthayi.active-sthayi {
+    display: revert;
+}
+
+.sthayi-control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sthayis {
+    width: clamp(4rem, 8dvw, 8rem);
+}
+
+.sthayis.active-sthayi {
+    color: white;
+    background-color: black;
+}
+
+
 /* Widgets */
 
 #widgets-frame {
