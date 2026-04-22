@@ -2,6 +2,30 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Narasiman Vasudevan is a Software Engineer specializing in AI infrastructure, LLM evaluation pipelines, fullstack development, and DevOps. Based in Hyderabad, India.">
+  <meta name="author" content="Narasiman Vasudevan">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://me.narasiman.dev/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://me.narasiman.dev/">
+  <meta property="og:title" content="Narasiman Vasudevan | Software Engineer">
+  <meta property="og:description" content="Portfolio of Narasiman Vasudevan — Software Engineer specializing in AI infrastructure, LLM apps, fullstack development, and DevOps.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Narasiman Vasudevan">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Narasiman Vasudevan | Software Engineer">
+  <meta name="twitter:description" content="Portfolio of Narasiman Vasudevan — Software Engineer specializing in AI infrastructure, LLM apps, fullstack development, and DevOps.">
+
+  <title>Narasiman Vasudevan | Software Engineer</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&family=Ultra&display=swap" rel="stylesheet">
@@ -9,6 +33,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="markdown-styles.css">
 
+  <link rel="dns-prefetch" href="https://kit.fontawesome.com">
   <script src="https://kit.fontawesome.com/e6e4069c41.js" crossorigin="anonymous"></script>
 
   <script type="module" src="./src/pages.js" defer></script>
@@ -18,10 +43,26 @@
   <script type="module" src="./src/widgets.js" defer></script>
   <script type="module" src="./src/links.js" defer></script>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Narasiman Vasudevan",
+    "jobTitle": "Software Engineer",
+    "url": "https://me.narasiman.dev/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hyderabad",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://github.com/madhav-fied",
+      "https://www.linkedin.com/in/narasiman-vasudevan-78b0b41a5/"
+    ],
+    "knowsAbout": ["Python", "FastAPI", "React", "LangChain", "LangGraph", "Docker", "Kubernetes", "GitHub Actions", "PostgreSQL", "Node.js", "AI Infrastructure"]
+  }
+  </script>
 
-  <title>Narasiman Vasudevan 🐣</title>
   <style>
     body {
       margin: 0;
@@ -41,15 +82,15 @@
           <span></span>
         </div>
         <div class="slabo-font button-list">
-          <button class="button" id="dl-resume">
+          <button class="button" id="dl-resume" aria-label="Download Resume">
             <span class="button-content slabo-font"> Resume </span>
             <span class="fa-solid fa-download" style="color: black;"></span>
           </button>
-          <button class="button" id="rd-github">
+          <button class="button" id="rd-github" aria-label="Visit GitHub profile">
             <span class="button-content slabo-font"> GitHub </span>
             <span class="fa-brands fa-github" style="color: black;"></span>
           </button>
-          <button class="button" id="rd-linkedin">
+          <button class="button" id="rd-linkedin" aria-label="Visit LinkedIn profile">
             <span class="button-content slabo-font"> LinkedIn </span>
             <span class="fa-brands fa-linkedin" style="color: black;"></span>
           </button>
@@ -314,10 +355,10 @@
           <div class="header" id="work-header">
             <div class="ultra-font">Creations of my Keyboard & I</div>
             <div>
-              <button class="controls prev-btn">
+              <button class="controls prev-btn" aria-label="Previous project">
                 <span class="fa-solid fa-arrow-right fa-flip-horizontal" style="color: #000;"></span>
               </button>
-              <button class="controls next-btn">
+              <button class="controls next-btn" aria-label="Next project">
                 <span class="fa-solid fa-arrow-right" style="color: #000;"></span>
               </button>
             </div>
@@ -393,10 +434,10 @@
               Random Stuff
             </div>
             <div>
-              <button class="controls prev-btn">
+              <button class="controls prev-btn" aria-label="Previous">
                 <span class="fa-solid fa-arrow-right fa-flip-horizontal" style="color: #000;"></span>
               </button>
-              <button class="controls next-btn">
+              <button class="controls next-btn" aria-label="Next">
                 <span class="fa-solid fa-arrow-right" style="color: #000;"></span>
               </button>
             </div>
@@ -413,42 +454,42 @@
               <div>
                 <div class="ultra-font">Swaras of Indian Classical Music</div>
                 <div class="swaras-button-list">
-                  <button class="swara Sa">
+                  <button class="swara Sa" aria-label="Sa">
                     <span class="taara-sthayi">.</span>
                     <span class="slabo-font">Sa</span>
                     <span class="mandra-sthayi">.</span>
                   </button>
-                  <button class="swara Re">
+                  <button class="swara Re" aria-label="Re">
                     <span class="taara-sthayi">.</span>
                     <span class="slabo-font">Re</span>
                     <span class="mandra-sthayi">.</span>
                   </button>
-                  <button class="swara Ga">
+                  <button class="swara Ga" aria-label="Ga">
                     <span class="taara-sthayi">.</span>
                     <span class="slabo-font">Ga</span>
                     <span class="mandra-sthayi">.</span>
                   </button>
-                  <button class="swara Ma">
+                  <button class="swara Ma" aria-label="Ma">
                     <span class="taara-sthayi">.</span>
                     <span class="slabo-font">Ma</span>
                     <span class="mandra-sthayi">.</span>
                   </button>
-                  <button class="swara Pa">
+                  <button class="swara Pa" aria-label="Pa">
                     <span class="taara-sthayi">.</span>
                     <span class="slabo-font">Pa</span>
                     <span class="mandra-sthayi">.</span>
                   </button>
-                  <button class="swara Dha">
+                  <button class="swara Dha" aria-label="Dha">
                     <span class="taara-sthayi">.</span>
                     <span class="slabo-font">Dha</span>
                     <span class="mandra-sthayi">.</span>
                   </button>
-                  <button class="swara Ne">
+                  <button class="swara Ne" aria-label="Ne">
                     <span class="taara-sthayi">.</span>
                     <span class="slabo-font">Ne</span>
                     <span class="mandra-sthayi">.</span>
                   </button>
-                  <button class="swara Sa-" style="border-right: 1px solid black;">
+                  <button class="swara Sa-" style="border-right: 1px solid black;" aria-label="Sa upper octave">
                     <span class="taara-sthayi">.</span>
                     <span class="slabo-font">Sa'</span>
                     <span class="mandra-sthayi">.</span>
