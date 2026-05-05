@@ -24,7 +24,7 @@ export default function Articles() {
                 </span>
             </div>
             <div className="relative">
-                <Sidebar sidebarOpen={menuOpen} items={articles} />
+                <Sidebar sidebarOpen={menuOpen} items={articles} toggleSidebarOpen={toggleMenu} />
                 <Outlet />
             </div>
         </>

@@ -2,6 +2,12 @@ import { useEffect, useRef, useCallback } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
+export const meta = {
+    "title": "Coin Flip",
+    "date": "2026-05-01",
+    "slug": "/lab/coin-flip",
+};
+
 function createTextTexture(text: string, color: string) {
     const canvas = document.createElement('canvas');
     canvas.width = 256;
@@ -9,7 +15,7 @@ function createTextTexture(text: string, color: string) {
     const ctx = canvas.getContext('2d')!;
     ctx.fillStyle = color;
     ctx.fillRect(0, 0, 256, 256);
-    ctx.fillStyle = '#FFFFFF';
+    ctx.fillStyle = '#271919';
     ctx.font = 'bold 160px Arial';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -43,7 +49,7 @@ export default function Coin() {
         if (!canvas) return;
 
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0xffffff);
+        scene.background = new THREE.Color(0x1C1A1A);
 
         const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
         camera.position.set(0, 8, 8);
@@ -51,7 +57,7 @@ export default function Coin() {
         const renderer = new THREE.WebGLRenderer({ canvas });
         renderer.setPixelRatio(window.devicePixelRatio);
 
-        scene.add(new THREE.AmbientLight(0xffffff, 20));
+        scene.add(new THREE.AmbientLight(0x1D1515, 20));
 
         const coinGeometry = new THREE.CylinderGeometry(1.5, 1.5, 0.25, 512);
         const headsMaterial = new THREE.MeshStandardMaterial({ map: createTextTexture('H', '#ffd700'), metalness: 0.1, roughness: 0.9 });
@@ -114,11 +120,11 @@ export default function Coin() {
     }, []);
 
     return (
-        <div className="flex flex-col h-full gap-2">
-            <button onClick={handleFlip} className="border border-black px-2 h-8 self-start cursor-pointer bg-white hover:border-2">
+        <div className="flex flex-col gap-2 items-center pt-12">
+            <canvas ref={canvasRef} className="grow border border-black w-full block" />
+            <button onClick={handleFlip} className="border border-gray-2 px-2 h-8 cursor-pointer">
                 Flip!
             </button>
-            <canvas ref={canvasRef} className="grow border border-black w-full block" />
         </div>
     );
 }

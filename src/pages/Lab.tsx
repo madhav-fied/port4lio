@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import Sidebar from "../components/Sidebar";
+import { Outlet } from "react-router";
+import { labItems } from "../content/lab";
 
 export default function Lab() {
 
@@ -22,7 +24,8 @@ export default function Lab() {
                 </span>
             </div>
             <div className="relative">
-                <Sidebar sidebarOpen={menuOpen} items={[]} />
+                <Sidebar sidebarOpen={menuOpen} items={labItems} toggleSidebarOpen={toggleMenu} />
+                <Outlet />
             </div>
         </>
     )

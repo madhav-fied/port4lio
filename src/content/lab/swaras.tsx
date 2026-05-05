@@ -1,5 +1,11 @@
 import { useState, useRef } from 'react';
 
+export const meta = {
+    "title": "Swaras",
+    "date": "2026-05-01",
+    "slug": "/lab/swaras",
+};
+
 const SWARAS = [
     { id: 'Sa', label: 'Sa', multiplier: 1 },
     { id: 'Re', label: 'Re', multiplier: 9 / 8 },
@@ -43,16 +49,16 @@ export default function Swaras() {
     };
 
     return (
-        <div className="flex flex-col gap-8 pt-8">
+        <div className="flex flex-col gap-12 pt-12">
             <div>
-                <div className="font-serif font-bold">Swaras of Indian Classical Music</div>
+                <div>Swaras of Indian Classical Music</div>
                 <div className="flex items-center h-32">
                     {SWARAS.map((swara, i) => (
                         <button
                             key={swara.id}
                             onClick={() => playNote(swara.multiplier)}
                             aria-label={swara.id}
-                            className={`bg-white text-xs h-20 w-14 flex flex-col justify-center items-center border border-black cursor-pointer hover:bg-gray-100 ${i < SWARAS.length - 1 ? 'border-r-0' : ''}`}
+                            className={`bg-bg text-xs h-20 w-14 flex flex-col justify-center items-center border border-gray-1 cursor-pointer hover:bg-fg ${i < SWARAS.length - 1 ? 'border-r-0' : ''}`}
                         >
                             <span className={`text-[0.5rem] ${activeSthayi === 'taara' ? 'visible' : 'invisible'}`}>·</span>
                             <span>{swara.label}</span>
@@ -62,13 +68,13 @@ export default function Swaras() {
                 </div>
             </div>
             <div className="flex items-center justify-between">
-                <div className="font-serif font-bold">Octave</div>
+                <div>Octave</div>
                 <div>
                     {STHAYIS.map(s => (
                         <button
                             key={s.key}
                             onClick={() => setActiveSthayi(s.key)}
-                            className={`px-3 py-1 border border-black text-xs cursor-pointer ${activeSthayi === s.key ? 'bg-black text-white' : 'bg-white text-black hover:border-2'}`}
+                            className={`px-3 py-1 border border-gray-1 text-xs cursor-pointer ${activeSthayi === s.key ? 'bg-bg text-fg' : 'bg-fg text-bg hover:border-1'}`}
                         >
                             {s.label}
                         </button>

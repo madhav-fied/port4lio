@@ -8,21 +8,18 @@ interface SidebarItem {
 
 export interface SidebarProps {
     sidebarOpen: boolean;
-    items: Array<SidebarItem>
+    items: Array<SidebarItem>;
+    toggleSidebarOpen: () => void
 }
 
-export default function Sidebar({ sidebarOpen, items }: SidebarProps) {
+export default function Sidebar({ sidebarOpen, items, toggleSidebarOpen }: SidebarProps) {
     return (
         <>
             <aside className={"z-25 h-dvh w-[45dvw] border border-transparent border-r-gray-3 flex flex-col text-gray-1 px-3 pt-3 gap-2 transition-transform duration-50 ease-in-out absolute bg-bg " + (sidebarOpen ? "translate-x-0" : "-translate-x-full")} >
-                <Link to="/">art 1</Link>
-                <Link to="/">art 1</Link>
-                <Link to="/">art 1</Link>
-                <Link to="/">art 1</Link>
                 {
                     items.map((item, idx) => {
                         return (
-                            <Link key={idx} to={item.slug}>{item.title}</Link>
+                            <Link key={idx} to={item.slug} onClick={toggleSidebarOpen}>{item.title}</Link>
                         )
                     })
                 }

@@ -1,10 +1,9 @@
 import { useLocation } from "react-router";
-import { articles } from "../content/articles";
+import { labItems } from "../content/lab";
 
-
-export default function ArticleContent() {
+export default function LabItem() {
     const { pathname } = useLocation();
-    const article = articles.find(a => a.slug === pathname);
+    const article = labItems.find(a => a.slug === pathname);
 
     if (!article) return <div>Not found</div>;
 
