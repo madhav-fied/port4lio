@@ -1,0 +1,9 @@
+.marquee-inner {
+    animation: scrollX 14s linear infinite;
+}
+
+@keyframes scrollX {
+    to {
+        transform: translateX(-50%);
+    }
+}

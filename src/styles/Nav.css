@@ -1,0 +1,26 @@
+.nav {
+    position: fixed;
+    z-index: 50;
+}
+
+.nav-desktop {
+    display: none
+}
+
+.nav-mobile[aria-hidden="true"] {
+    display: none
+}
+
+@media (min-width: 768px) {
+    .nav-desktop {
+        display: block;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .nav-mobile-toggle {
+        display: none;
+    }
+}

@@ -1,0 +1,27 @@
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App.tsx'
+import { BrowserRouter, Routes, Route } from 'react-router';
+import "@fontsource/jetbrains-mono";
+import "./styles/globals.css"
+import Contact from './pages/Contact.tsx';
+import Lab from './pages/Lab.tsx';
+import Gallery from './pages/Gallery.tsx';
+import Articles from './pages/Articles.tsx';
+import ArticleContent from './components/ArticleContent.tsx';
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/articles" element={<Articles />}>
+          <Route path=":slug" element={<ArticleContent />} />
+        </Route>
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/lab" element={<Lab />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  </StrictMode>,
+)
