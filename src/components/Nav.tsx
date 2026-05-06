@@ -14,7 +14,7 @@ export default function Nav() {
 
     return (
         <header className="nav fixed inset-x-0 top-0 h-16">
-            <div className="nav-inner flex justify-between p-2">
+            <div className="nav-inner flex justify-between py-3">
                 <Link to="/" className="logo flex gap-4 align-center p-1">
                     <span className="bg-fg text-bg">
                         NV
@@ -22,8 +22,8 @@ export default function Nav() {
                     <span>Narasiman<span className="text-gray-2"> / Vasudevan</span></span>
                 </Link>
                 <nav className="nav-desktop">
-                    <Link to="/articles">articles</Link>
-                    <Link to="/lab">lab</Link>
+                    <Link to="/articles/latest">articles</Link>
+                    <Link to="/lab/latest">lab</Link>
                     <Link to="/gallery">gallery</Link>
                     <Link to="/contact">contact</Link>
                 </nav>
@@ -33,26 +33,20 @@ export default function Nav() {
                 </button>
             </div>
             <nav className="nav-mobile flex flex-col bg-bg" aria-hidden={!menuToggled}>
-                <Link to="/articles">
-                    <span className="flex justify-between border-b-1 border-b-gray-3">
-                        <span className="text-gray-2">+</span>
+                <Link to="/articles/latest">
+                    <span className="flex justify-between border-b-1 border-b-gray-3 py-2">
+                        <span className="text-gray-2 ">+</span>
                         articles
                     </span>
                 </Link>
-                <Link to="/lab">
-                    <span className="flex justify-between border-b-1 border-b-gray-3">
+                <Link to="/lab/latest">
+                    <span className="flex justify-between border-b-1 border-b-gray-3 py-2">
                         <span className="text-gray-2">+</span>
                         lab
                     </span>
                 </Link>
-                <Link to="/gallery">
-                    <span className="flex justify-between border-b-1 border-b-gray-3">
-                        <span className="text-gray-2">+</span>
-                        gallery
-                    </span>
-                </Link>
                 <Link to="/contact">
-                    <span className="flex justify-between border-b-1 border-b-gray-3">
+                    <span className="flex justify-between border-b-1 border-b-gray-3 py-2">
                         <span className="text-gray-2">+</span>
                         contact
                     </span>

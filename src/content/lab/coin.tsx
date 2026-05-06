@@ -120,11 +120,14 @@ export default function Coin() {
     }, []);
 
     return (
-        <div className="flex flex-col gap-2 items-center pt-12">
-            <canvas ref={canvasRef} className="grow border border-black w-full block" />
-            <button onClick={handleFlip} className="border border-gray-2 px-2 h-8 cursor-pointer">
-                Flip!
-            </button>
-        </div>
+        <>
+            <div className="flex flex-col gap-12 items-center pt-12">
+                <div>Quick coin flip 3D</div>
+                <canvas ref={canvasRef} className="grow border border-black w-full block" />
+                <button onClick={handleFlip} className="border border-gray-2 px-2 h-8 cursor-pointer">
+                    Flip!
+                </button>
+            </div>
+        </>
     );
 }

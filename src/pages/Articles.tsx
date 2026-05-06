@@ -8,25 +8,25 @@ import { Outlet } from "react-router";
 
 export default function Articles() {
 
-    const [menuOpen, setMenuOpen] = useState<boolean>(true);
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     const toggleMenu = () => {
         setMenuOpen(prev => !prev);
     }
 
     return (
-        <>
+        <div className="flex flex-col h-dvh overflow-hidden">
             <Nav />
-            <div className="mt-16 border border-gray-3 flex justify-between items-center h-10">
+            <div className="mt-16 shrink-0 border border-gray-3 flex justify-between items-center h-10">
                 <FontAwesomeIcon icon={faBars} size="sm" onClick={toggleMenu} />
                 <span className="text-gray-1 text-sm">
                     /Articles
                 </span>
             </div>
-            <div className="relative">
+            <div className="relative flex-1">
                 <Sidebar sidebarOpen={menuOpen} items={articles} toggleSidebarOpen={toggleMenu} />
                 <Outlet />
             </div>
-        </>
+        </div>
     )
 }

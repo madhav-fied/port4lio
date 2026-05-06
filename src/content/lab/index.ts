@@ -7,12 +7,12 @@ export interface LabItem {
 }
 
 const _LAB_MODS = import.meta.glob("./*.tsx", { eager: true });
-export const labItems = Object.values(_LAB_MODS).map((a: any, idx) => {
-    return {
-        "idx": idx,
+export const labItems = Object.values(_LAB_MODS)
+    .map((a: any) => ({
         "title": a.meta.title,
         "date": a.meta.date,
         "slug": a.meta.slug,
         "component": a.default,
-    }
-})
+    }))
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .map((a, idx) => ({ idx, ...a }))
