@@ -58,7 +58,7 @@ export default function Swaras() {
                             key={swara.id}
                             onClick={() => playNote(swara.multiplier)}
                             aria-label={swara.id}
-                            className={`bg-bg text-xs h-20 w-14 flex flex-col justify-center items-center border border-gray-1 cursor-pointer hover:bg-fg ${i < SWARAS.length - 1 ? 'border-r-0' : ''}`}
+                            className={`bg-bg text-xs h-20 w-14 flex flex-col justify-center items-center border border-gray-1 cursor-pointer hover:bg-fg hover:text-bg ${i < SWARAS.length - 1 ? 'border-r-0' : ''}`}
                         >
                             <span className={`text-[0.5rem] ${activeSthayi === 'taara' ? 'visible' : 'invisible'}`}>·</span>
                             <span>{swara.label}</span>

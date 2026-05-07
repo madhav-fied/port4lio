@@ -1,0 +1,38 @@
+export const meta = { title: "Homelab dev log", date: "2025-09-16", "slug": "/articles/homelab-log" }
+
+# Homelab dev log
+
+### Every CS major's desire
+###### 16/09/2025
+
+Since I was a kid, I've always been fond of building and tearing apart computers and their components,
+starting with my first PC that had a Pentium core, all the way to my latest one packed with an RTX 4070Ti.
+Naturally, majoring in computer science got me into writing and deploying software.
+Since then, the desire to run a server with the apps I actually use, fully under my own control, kept quietly growing.
+Channels like NetworkChuck, LTT, and PewDiePie kept the fire burning as they were doing cool tech stuff I wanted to do myself.
+
+___
+
+### building the machine
+##### 20/12/2025
+
+My initial plan was to repurpose my old machine with its 8th gen i3, something cheap and quick.
+But I quickly learned that virtualization doesn't play well with older CPUs, so building something new was the way to go.
+I picked up an AMD Ryzen 5500X, a decent motherboard, and 16GB of RAM (not cheap). Packed it all into an Ant Esports case with a 650W PSU.
+All in, I spent around ₹30,000 (~$280–300), slightly over budget. Booted up Proxmox VE and christened the machine: **Apollo**.
+
+
+___
+
+### hosting simple personal services
+##### 30/1/2026
+
+And we're live. Proxmox is running great. Got a domain and stood up a couple of services: a simple portfolio and a multiplayer blackjack platform with WebSockets for playing with friends.
+Set up an Nginx LXC as a reverse proxy, went with LXC over a VM to keep things lightweight.
+Hosted the app containers in their respective LXCs, configured the routes, and reserved a static local IP via DHCP reservation. Airtel's router configs are painfully restrictive by the way, ACT and Jio are a breath of fresh air.
+The next challenge was linking the domain to my home IP. Getting a public static IP from the ISP is expensive and brings a lot of extra baggage. Luckily I stumbled onto Cloudflare Tunnel, which comes bundled with the domain.
+The initial setup was a bit fiddly, but once I got it right the site went live. What a rewarding experience.
+
+![homelab setup](/public/content/Apollo.svg)
+
+

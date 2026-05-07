@@ -14,7 +14,7 @@ export default function Nav() {
 
     return (
         <header className="nav fixed inset-x-0 top-0 h-16">
-            <div className="nav-inner flex justify-between py-3">
+            <div className="nav-inner flex justify-between py-3 px-2">
                 <Link to="/" className="logo flex gap-4 align-center p-1">
                     <span className="bg-fg text-bg">
                         NV

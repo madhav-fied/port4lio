@@ -1,5 +1,6 @@
 import { useLocation } from "react-router";
 import { articles } from "../content/articles";
+import "../styles/ArticleContent.css";
 
 
 export default function ArticleContent() {

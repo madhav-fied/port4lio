@@ -15,15 +15,15 @@ export default function Articles() {
     }
 
     return (
-        <div className="flex flex-col h-dvh overflow-hidden">
+        <div className="flex flex-col h-dvh overflow-hidden relative">
             <Nav />
-            <div className="mt-16 shrink-0 border border-gray-3 flex justify-between items-center h-10">
+            <div className="mt-16 shrink-0 border border-gray-3 flex justify-between items-center h-10 px-2">
                 <FontAwesomeIcon icon={faBars} size="sm" onClick={toggleMenu} />
                 <span className="text-gray-1 text-sm">
                     /Articles
                 </span>
             </div>
-            <div className="relative flex-1">
+            <div className="overflow-y-auto">
                 <Sidebar sidebarOpen={menuOpen} items={articles} toggleSidebarOpen={toggleMenu} />
                 <Outlet />
             </div>
