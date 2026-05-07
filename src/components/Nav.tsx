@@ -24,7 +24,6 @@ export default function Nav() {
                 <nav className="nav-desktop">
                     <Link to="/articles/latest">articles</Link>
                     <Link to="/lab/latest">lab</Link>
-                    <Link to="/gallery">gallery</Link>
                     <Link to="/contact">contact</Link>
                 </nav>
 

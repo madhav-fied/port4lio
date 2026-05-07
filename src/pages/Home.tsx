@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faCamera } from "@fortawesome/free-regular-svg-icons";
 import Marquee from "../components/Marquee";
+import { redirect } from "../utils/links";
 
 export default function Home() {
 
@@ -15,7 +16,7 @@ export default function Home() {
     return (
         <>
             <div className="mt-16 grid grid-cols-[3fr_1fr] gap-0 border border-1 border-gray-3 ">
-                <Polaroid src="./public/me.jpg" text="Myself @ 2026 Jan" />
+                <Polaroid src="/me.jpg" text="Myself @ 2026 Jan" />
                 <div className="[text-orientation:upright] [writing-mode:vertical-lr] h-80 text-2xl font-extrabold text-center">
                     <span className="text-gray-2">SOFTWARE. <span className="text-fg">.ENGINEER</span></span>
                 </div>
@@ -31,7 +32,7 @@ export default function Home() {
                 </span>
             </div>
             <div className="grid grid-cols-4 h-18">
-                <div className="border border-gray-3 flex flex-col justify-evenly">
+                <div className="border border-gray-3 flex flex-col justify-evenly cursor-pointer" onClick={() => redirect("rd-github")}>
                     <span className="text-gray-1 text-xs">
                         &gt; github
                     </span>
@@ -47,7 +48,7 @@ export default function Home() {
                         <FontAwesomeIcon icon={faCamera} size="2x" className="text-gray-2" fade />
                     </div>
                 </div>
-                <div className="border border-gray-3 flex flex-col justify-between py-2">
+                <div className="border border-gray-3 flex flex-col justify-between py-2 cursor-pointer" onClick={() => redirect("rd-x")}>
                     <span className="text-gray-1 text-xs">
                         &gt; x(twitter)
                     </span>
@@ -55,7 +56,7 @@ export default function Home() {
                         <FontAwesomeIcon icon={faXTwitter} size="lg" />
                     </div>
                 </div>
-                <div className="border border-gray-3 flex flex-col justify-between py-2">
+                <div className="border border-gray-3 flex flex-col justify-between py-2 cursor-pointer" onClick={() => redirect("rd-linkedin")}>
                     <span className="text-gray-1 text-xs">
                         &gt; linkedin
                     </span>

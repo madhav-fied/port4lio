@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Nav from "../components/Nav";
+import { redirect, downloadFile } from "../utils/links";
 
 const MAIL = "madhavcv2116@gmail.com";
 
@@ -51,22 +52,22 @@ export default function Contact() {
                 </div>
 
                 <div className="grid grid-cols-2 border border-t-0 border-gray-3">
-                    <div className="border-r border-gray-3 flex flex-col gap-2 p-4">
+                    <div className="border-r border-gray-3 flex flex-col gap-2 p-4 cursor-pointer" onClick={() => redirect("rd-github")}>
                         <span className="text-gray-1 text-xs">&gt; github</span>
                         <span className="text-gray-2 text-xs">madhav-fied</span>
                     </div>
-                    <div className="flex flex-col gap-2 p-4">
+                    <div className="flex flex-col gap-2 p-4 cursor-pointer" onClick={() => redirect("rd-linkedin")}>
                         <span className="text-gray-1 text-xs">&gt; linkedin</span>
                         <span className="text-gray-2 text-xs">Narasiman</span>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-2 border border-t-0 border-gray-3">
-                    <div className="border-r border-gray-3 flex flex-col gap-2 p-4">
+                    <div className="border-r border-gray-3 flex flex-col gap-2 p-4 cursor-pointer" onClick={() => redirect("rd-x")}>
                         <span className="text-gray-1 text-xs">&gt; x(twitter)</span>
                         <span className="text-gray-2 text-xs">placeholder</span>
                     </div>
-                    <div className="flex flex-col gap-2 p-4">
+                    <div className="flex flex-col gap-2 p-4 cursor-pointer" onClick={() => downloadFile("/Narasiman_Resume.pdf", "Narasiman_Resume.pdf")}>
                         <span className="text-gray-1 text-xs">&gt; resume</span>
                         <span className="text-gray-2 text-xs">Narasiman_Resume.pdf</span>
                     </div>
