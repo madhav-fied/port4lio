@@ -70,17 +70,26 @@ export default function Home() {
                             &gt; Projects
                         </div>
                         <div className="flex flex-col gap-3 md:gap-6 justify-center text-xs md:text-sm w-[80%] text-gray-2">
-                            <div className="border border-transparent border-b-gray-3 hover:text-fg cursor-pointer">
+                            <div
+                                className="border border-transparent border-b-gray-3 hover:text-fg cursor-pointer"
+                                onClick={() => redirect("rd-proj-cards")}
+                            >
                                 <span>
-                                    Multiplayer Blackjack
+                                    Multiplayer Blackjack (wss)
                                 </span>
                             </div>
-                            <div className="border border-transparent border-b-gray-3 hover:text-fg cursor-pointer">
+                            <div
+                                className="border border-transparent border-b-gray-3 hover:text-fg cursor-pointer"
+                                onClick={() => redirect("rd-proj-clib")}
+                            >
                                 <span>
                                     Clib - Datastructures in C
                                 </span>
                             </div>
-                            <div className="border border-transparent border-b-gray-3 hover:text-fg cursor-pointer">
+                            <div
+                                className="border border-transparent border-b-gray-3 hover:text-fg cursor-pointer"
+                                onClick={() => redirect("rd-proj-quick-links")}
+                            >
                                 <span>
                                     Quick links
                                 </span>
