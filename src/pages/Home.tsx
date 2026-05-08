@@ -5,6 +5,7 @@ import { faCamera } from "@fortawesome/free-regular-svg-icons";
 import Marquee from "../components/Marquee";
 import { redirect } from "../utils/links";
 import "../styles/Home.css";
+import { Link } from "react-router";
 
 export default function Home() {
 
@@ -31,11 +32,13 @@ export default function Home() {
                         <FontAwesomeIcon icon={faGithubAlt} size="lg" />
                     </div>
                 </div>
-                <div className="border border-gray-3 flex flex-col justify-evenly">
-                    <div className="flex justify-center">
-                        <FontAwesomeIcon icon={faCamera} size="2x" className="text-gray-2" fade />
+                <Link to="/gallery">
+                    <div className="border border-gray-3 flex flex-col justify-evenly h-full">
+                        <div className="flex justify-center ">
+                            <FontAwesomeIcon icon={faCamera} size="2x" className="text-gray-2" fade />
+                        </div>
                     </div>
-                </div>
+                </Link>
                 <div className="border border-gray-3 flex flex-col justify-between py-5 px-2 cursor-pointer" onClick={() => redirect("rd-x")}>
                     <span className="text-gray-1 text-xs grid-block-header">
                         &gt; X.com

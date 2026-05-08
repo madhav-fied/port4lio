@@ -21,9 +21,10 @@ export default function Nav() {
                     </span>
                     <span>Narasiman<span className="text-gray-2"> / Vasudevan</span></span>
                 </Link>
-                <nav className="nav-desktop">
+                <nav className="nav-desktop text-gray-1">
                     <Link to="/articles/latest">articles</Link>
                     <Link to="/lab/latest">lab</Link>
+                    <Link to="/gallery">pins</Link>
                     <Link to="/contact">contact</Link>
                 </nav>
 
@@ -31,21 +32,27 @@ export default function Nav() {
                     Menu
                 </button>
             </div>
-            <nav className="nav-mobile flex flex-col bg-bg" aria-hidden={!menuToggled}>
+            <nav className="nav-mobile flex flex-col bg-bg text-gray-1" aria-hidden={!menuToggled}>
                 <Link to="/articles/latest">
-                    <span className="flex justify-between border-b-1 border-b-gray-3 py-2">
+                    <span className="flex justify-between border-b-1 border-b-gray-3 p-2">
                         <span className="text-gray-2 ">+</span>
                         articles
                     </span>
                 </Link>
                 <Link to="/lab/latest">
-                    <span className="flex justify-between border-b-1 border-b-gray-3 py-2">
+                    <span className="flex justify-between border-b-1 border-b-gray-3 p-2">
                         <span className="text-gray-2">+</span>
                         lab
                     </span>
                 </Link>
+                <Link to="/gallery">
+                    <span className="flex justify-between border-b-1 border-b-gray-3 p-2">
+                        <span className="text-gray-2">+</span>
+                        pins
+                    </span>
+                </Link>
                 <Link to="/contact">
-                    <span className="flex justify-between border-b-1 border-b-gray-3 py-2">
+                    <span className="flex justify-between border-b-1 border-b-gray-3 p-2">
                         <span className="text-gray-2">+</span>
                         contact
                     </span>
