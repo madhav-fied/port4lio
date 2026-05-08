@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router';
+// @ts-ignore
 import "@fontsource/jetbrains-mono";
 import "./styles/globals.css"
 import Contact from './pages/Contact.tsx';

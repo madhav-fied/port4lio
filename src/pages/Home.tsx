@@ -9,8 +9,8 @@ import { Link } from "react-router";
 
 export default function Home() {
 
-    const MARQUEE_WORDS = [
-        , "Python", "Langchain", "Javascript", "FastAPI",
+    const MARQUEE_WORDS: string[] = [
+        "Python", "Langchain", "Javascript", "FastAPI",
         "Nginx", "React", "Langgraph", "Socket.IO", "Blender",
         "K8S", "GH Actions", "PostgreSQL", "NextJS", "MCP"
     ]
