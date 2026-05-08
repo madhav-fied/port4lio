@@ -1,0 +1,8 @@
+/* ── desktop ── */
+@media (min-width: 768px) {
+    .contact-page {
+        max-width: 700px;
+        margin: calc(var(--spacing) * 16) auto;
+        padding: 0 var(--spacing-pad-x);
+    }
+}

@@ -23,4 +23,17 @@
     .nav-mobile-toggle {
         display: none;
     }
+
+    .nav-inner {
+        width: 800px;
+        margin: 0 auto;
+        border-bottom: 1px solid var(--color-gray-2);
+    }
+
+    .nav-desktop {
+        width: 400px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 }

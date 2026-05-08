@@ -1,0 +1,30 @@
+/* ── desktop ── */
+@media (min-width: 768px) {
+    .home-page {
+        width: 800px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-pad-x);
+    }
+
+    .designation {
+        margin: auto 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .grid-block-header {
+        font-size: larger;
+    }
+
+    .desc-whoami {
+        font-size: medium;
+    }
+
+    .contact-row {
+        height: 160px
+    }
+
+    .marquee-outer {
+        height: 80px;
+    }
+}

@@ -1,0 +1,21 @@
+/* ── desktop ── */
+@media (min-width: 768px) {
+    .pl-outer-body {
+        width: 500px;
+        height: 540px;
+    }
+
+    .pl-inner-frame {
+        height: 400px;
+        width: 400px;
+        top: 48px;
+        left: 48px;
+    }
+
+    .pl-caption {
+        top: 75px;
+        font-size: larger;
+    }
+
+
+}

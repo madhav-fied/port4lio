@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Nav from "../components/Nav";
 import { redirect, downloadFile } from "../utils/links";
+import "../styles/Contact.css";
 
 const MAIL = "madhavcv2116@gmail.com";
 
@@ -31,8 +32,7 @@ export default function Contact() {
     return (
         <>
             <Nav />
-            <div className="mt-16">
-
+            <div className="contact-page mt-16">
                 <div className="border border-gray-3 flex flex-col gap-2 p-4">
                     <span className="text-gray-1">&gt; contact</span>
                     <span className="text-gray-2 text-xs leading-relaxed">
