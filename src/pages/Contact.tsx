@@ -32,7 +32,7 @@ export default function Contact() {
     return (
         <>
             <Nav />
-            <div className="contact-page mt-16">
+            <div id="main-content" className="contact-page mt-16">
                 <div className="border border-gray-3 flex flex-col gap-2 p-4">
                     <span className="text-gray-1">&gt; contact</span>
                     <span className="text-gray-2 text-xs leading-relaxed">
@@ -76,21 +76,27 @@ export default function Contact() {
                 <div className="border border-t-0 border-gray-3 flex flex-col gap-3 p-4">
                     <span className="text-gray-1 text-xs">&gt; message</span>
 
+                    <label htmlFor="contact-name" className="sr-only">Name</label>
                     <input
+                        id="contact-name"
                         type="text"
                         placeholder="name"
                         value={name}
                         onChange={e => { setName(e.target.value); setError(""); }}
                         className={inputClass}
                     />
+                    <label htmlFor="contact-email" className="sr-only">Email</label>
                     <input
+                        id="contact-email"
                         type="email"
                         placeholder="email"
                         value={email}
                         onChange={e => { setEmail(e.target.value); setError(""); }}
                         className={inputClass}
                     />
+                    <label htmlFor="contact-message" className="sr-only">Message</label>
                     <textarea
+                        id="contact-message"
                         placeholder="message"
                         rows={5}
                         value={message}

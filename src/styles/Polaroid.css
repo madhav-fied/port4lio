@@ -1,19 +1,19 @@
 /* ── desktop ── */
 @media (min-width: 768px) {
     .pl-outer-body {
-        width: 500px;
+        width: 100%;
         height: 540px;
     }
 
     .pl-inner-frame {
-        height: 400px;
-        width: 400px;
-        top: 48px;
-        left: 48px;
+        height: 80%;
+        width: 80%;
+        top: 8%;
+        left: 10%;
     }
 
     .pl-caption {
-        top: 75px;
+        top: 12%;
         font-size: larger;
     }
 

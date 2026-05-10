@@ -15,7 +15,7 @@ export default function Articles() {
     }
 
     return (
-        <div className="flex flex-col h-dvh overflow-hidden relative">
+        <div id="main-content" className="flex flex-col h-dvh overflow-hidden relative">
             <Nav />
             <div className="mt-16 shrink-0 border border-gray-3 flex justify-between items-center h-10 px-2">
                 <FontAwesomeIcon icon={faBars} size="sm" onClick={toggleMenu} />

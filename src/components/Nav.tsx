@@ -13,7 +13,13 @@ export default function Nav() {
 
 
     return (
-        <header className="nav fixed inset-x-0 top-0 h-16">
+        <header className="nav fixed inset-x-0 top-0 h-16 bg-bg">
+            <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:absolute focus:top-20 focus:left-4 focus:z-50 focus:px-3 focus:py-1 focus:bg-bg focus:text-fg focus:border focus:border-gray-3 focus:text-xs"
+            >
+                skip to main content
+            </a>
             <div className="nav-inner flex justify-between py-3 px-2">
                 <Link to="/" className="logo flex gap-4 align-center p-1">
                     <span className="bg-fg text-bg">

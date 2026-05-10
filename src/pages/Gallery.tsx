@@ -6,7 +6,9 @@ export default function Gallery() {
     return (
         <>
             <Nav />
-            <GalleryGrid photos={photos} />
+            <main id="main-content">
+                <GalleryGrid photos={photos} />
+            </main>
         </>
     );
 }

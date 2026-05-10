@@ -16,10 +16,11 @@ export default function Home() {
     ]
 
     return (
-        <div className="home-page flex flex-col h-screen">
+        <div id="main-content" className="home-page flex flex-col h-screen">
+            <h1 className="sr-only">Narasiman Vasudevan — Software Engineer Portfolio</h1>
             <div className="mt-16 grid grid-cols-[3fr_1fr] gap-0 border border-1 border-gray-3 ">
                 <Polaroid src="/me.jpg" text="Myself @ 2026 Jan" />
-                <div className="designation [text-orientation:upright] [writing-mode:vertical-lr] h-80 text-2xl font-extrabold text-center">
+                <div className="designation [text-orientation:upright] [writing-mode:vertical-lr] h-80 md:text-2xl text-lg font-extrabold text-center mx-0 my-auto">
                     <span className="text-gray-2">SOFTWARE. <span className="text-fg">.ENGINEER</span></span>
                 </div>
             </div>

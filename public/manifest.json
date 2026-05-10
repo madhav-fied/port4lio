@@ -1,0 +1,16 @@
+{
+  "name": "Narasiman Vasudevan",
+  "short_name": "port4lio",
+  "description": "Portfolio of Narasiman Vasudevan, software engineer building GenAI systems, 3D interfaces, and interactive web experiences.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0d0d0d",
+  "theme_color": "#0d0d0d",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
